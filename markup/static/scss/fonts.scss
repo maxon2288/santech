@@ -1,2 +1,4 @@
 // Fonts by Maxim Sinukov
-// @include font-face("ral", "../fonts/prox/prox", 900, normal);
+@include font-face("prox", "../fonts/prox/proximanova-regular", 400, normal);
+@include font-face("prox", "../fonts/prox/proximanova-semibold", 500, normal);
+@include font-face("prox", "../fonts/prox/proximanova-bold", 700, normal);

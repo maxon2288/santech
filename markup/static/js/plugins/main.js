@@ -2,7 +2,6 @@
 $(document).ready(function () {
 	$("body").css({'visibility': "visible", "opacity": "1"});
 	popup ();
-	M.AutoInit();
 	// forms();
 
 	var swiper = new Swiper('.slider', {
