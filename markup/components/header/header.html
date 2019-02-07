@@ -97,7 +97,35 @@
 
     <div class="header__features">
         <div class="wrapper">
-            
+            <div class="header__container">
+                <div class="header__catalog">
+                    {{Icon iconName="catalog"}}
+                    Каталог товаров
+                </div>
+                <form class="header__search m-search">
+                    <select class="search-select after" name="" id="">
+                        <option value="">Товар</option>
+                        <option value="">Услуги</option>
+                    </select>
+                    <input type="text" class="header__search-field" name="search" placeholder="Что вы ищете?">
+                    <button class="header__search-button">
+                        {{Icon iconName="search"}}
+                        найти
+                    </button>
+                </form>
+                <div class="header__count">
+                    <div class="header__like header__count-item">
+                        {{Icon iconName="like"}}
+                    </div>
+                    <div class="header__comp header__count-item">
+                        {{Icon iconName="comprison"}}
+                    </div>
+                </div>
+                <a href="#" class="header__basket">
+                    {{Icon iconName="basket"}}
+                    0 руб.
+                </a>
+            </div>
         </div>
     </div>
 </header>

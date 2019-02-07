@@ -3,6 +3,7 @@
     &__container{
         display: flex;
         width: 100%;
+        height: 100%;
         align-items: center;
         justify-content: space-between; 
     }
@@ -52,6 +53,7 @@
         &-text {
             max-width: 200px;
             width: 100%;
+            line-height: normal;
         }
         &:active {
             transform: translateY(1px);
@@ -93,7 +95,7 @@
         }
     }
     &__bottom {
-        padding: 23px 0;
+        padding: 7px 0;
     }
     &__bottom-menu {
         display: flex;
@@ -112,7 +114,7 @@
         }
     }
     &__phone{
-        max-width: 170px;
+        max-width: 205px;
         width: 100%;
         display: flex;  
         align-items: center;
@@ -148,6 +150,117 @@
             .header__phone-number{
                 color: #979797;
             }
+        }
+    }
+    &__features {
+        background-color: #2793ED;
+        justify-content: space-between;
+        height: 53px;
+        .wrapper {
+            height: 100%;
+        }
+    }
+    &__catalog{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        font-family: "prox";
+        text-transform: uppercase;
+        padding: 0 30px;
+        min-width: 260px;
+        background-color: #037CE3;
+        
+        svg {
+            margin-right: 23px; 
+        }
+    }
+    &__search {
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+        
+        &-field {
+            background-color: #E9F3FB;
+            color: #4D4D4D;
+            border: none;
+            position: relative;
+            max-width: 420px;
+            width: 100%;
+            font-family: "prox";
+            padding-left: 30px;
+            max-width: 100%;    
+            transition: 0.3s;        
+            &::placeholder {
+                color: #4D4D4D;
+            }
+            &:focus {
+                background-color: rgb(228, 239, 248);
+            }
+            
+        }
+        &-button {
+            min-width: 175px;
+            width: 175px;
+            background-color: $green;
+            transition: 0.3s;
+            border: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-weight: 500;
+            font-family: "prox";
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            svg  {
+                margin-right: 12px;
+                transition: 0.3s;
+            }
+            &:hover {
+                background-color: $greenHover;
+                svg {
+                    transform: scale(1.5);
+                }
+            }
+            &:active {
+                background-color: $greenActive;
+            }
+        }
+    }   
+    &__count {
+        display: flex;
+        fill: #0373D2;
+        height: 100%;
+        &-item {
+            width: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            border-right: 1px solid #037CE3;
+        }
+    }
+    &__basket {
+        font-family: 'prox';
+        font-size: 18px;
+        font-weight: bold;
+        max-width: 200px;
+        width: 100%;
+        background-color: #037CE3;
+        color: #FFFFFF;
+        height: 100%;
+        display: flex;  
+        align-items: center;
+        padding-left: 20px;
+        transition: 0.3s;
+        fill: #2D9BF7;
+        &:hover {
+            background-color: #0574d4;
+        }
+        svg {
+            margin-right: 12px;
         }
     }
 }

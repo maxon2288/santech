@@ -29,6 +29,13 @@
     font-weight: 700;
     color: #4A4A4A;
 }
+.m-title-5,h5 {
+    font-family: "prox";
+    line-height: normal;
+    font-size: 20px;
+    font-weight: 400;
+    color: #4A4A4A;
+}
 
 .m-desc {
     font-size: 16px;
@@ -86,8 +93,12 @@ a {
 .m-text {
     font-family: "prox";
     color: $grey;
+    font-size: 16px;    
+}
+.m-text-2 {
+    font-family: "prox";
+    color: $grey;
     font-size: 14px;    
-
 }
 .nice-select.m-select-1 {
     padding: 0;
@@ -122,28 +133,99 @@ a {
     }
 
 }
+
+.nice-select.search-select {
+    @extend .m-select-2;
+    border-radius: 0px;
+    height: 100%;
+    margin: 0;
+    height: 53px;
+    border: none;
+    background-color: #E9F3FB;
+    width: 120px;
+    color: $blue;
+    font-weight: 500;
+    padding-right: 40px;
+    &:after {
+        right: 20px;
+    }
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 32px;
+        width: 1px;
+        background-color: #B4CFE4;
+    }
+}
 .m-button {
-    color: white;
-    font-weight: bold;
+    background: $green;
+    border-radius: 2px;
+    padding: 15px 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 100px;
-    background-color: #204b99;
-    border: none;
-    max-width: 100%;
-    width: 100%;
-    font-size: 12px;
+    color: white;   
+    fill: #289006;
+    transition: 0.3s;
     text-transform: uppercase;
-    cursor: pointer;
-    width: 200px;
-    height: 60px;
-    &-angle {
-        min-width: 135px;       
-        display: flex;
-        width: 100%;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+    font-weight: 500;
+    
+    svg {
+        margin-right: 12px;
+    }
+    &:hover {
+        background-color: $greenHover;
+    }
+    &:active {
+        background-color: $greenActive;
+    }
+}
+.m-button-r {
+    background: white;
+    border-radius: 2px;
+    max-width: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    color: $green;
+    align-items: center;
+    justify-content: center;
+    color: $green;   
+    text-align: center;
+    vertical-align: middle;
+    fill: #289006;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1px solid #289006;
+    flex-grow: 0;
+    svg {
+        margin-right: 12px;
+    }
+    &:hover {
+        background-color: $green;
+        color: white;
+        border-color: $green;
+        fill: white;
+    }
+    &:active {
+        background-color: $greenHover;
+        color: white;
+        border-color: $greenHover;
+    }
+}
+.m-link-arrow {
+    svg {
+        transition: 0.3s;
+    }
+    &:hover {
+        svg {
+            transform: translatex(7px);    
+        }
     }
 }
 
@@ -208,40 +290,68 @@ a {
     }
 }
 
+input {
+    &::placeholder {
+        transition: 0.3s;
+    }
+    &:focus::placeholder {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+}
+
 .mr0 {
     margin-right: 0 !important; 
+    display: block;
 }
 
 .mt10 {
     margin-top: 10px !important; 
+    display: block;
 }
 
 .mt20 {
     margin-top: 20px !important; 
+    display: block;
 }
 
 .mt30 {
     margin-top: 30px !important; 
+    display: block;
 }
 
 .mt15 {
+    display: block;
     margin-top: 15px !important; 
+    display: block;
 }
 
 .mt25{
     margin-top: 25px !important; 
+    display: block;
 }
 
 .mb10{
     margin-bottom: 10px !important; 
+    display: block;
+}
+.mb15{
+    margin-bottom: 15px !important; 
+    display: block;
 }
 
 .mb20 {
     margin-bottom: 20px !important; 
+    display: block;
+}
+.mb25 {
+    margin-bottom: 25px !important; 
+    display: block;
 }
 
 .mb30 {
     margin-bottom: 30px !important; 
+    display: block;
 }
 
 .ml10{
@@ -266,4 +376,14 @@ a {
 
 .mr30{
     margin-right: 30px !important;
+}
+
+.icon-green {
+    fill: $green;
+}
+.icon-white {
+    fill: #ffffff;
+}
+.icon-blue {
+    fill: $blue
 }

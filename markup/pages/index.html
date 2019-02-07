@@ -9,6 +9,216 @@
 
     
     
+    <div class="wrapper">
+        <div class="container">
+            
+            {{> sidebar/sidebar}}
+
+            <div class="content-cont">
+                <div class="top">
+                    <div class="swiper-container m-slider"> 
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide m-slider__slide">
+                                <div class="m-slider__l">
+                                    <div class="m-slider__l-bg m-img-cont">
+                                        <img src="%=static=%img/content/bg-1.jpg" alt="">
+                                    </div>
+                                    <div class="m-slider__t m-title-1 mb10" data-swiper-parallax="-200">
+                                            Ванная комната из керамики
+                                    </div>
+                                    <div class="m-slider__d m-text" data-swiper-parallax="-300">
+                                            Купите раковину и получите в подарок 
+                                            кран из керамики
+                                            данное предложение действует 2 дня
+                                    </div>
+                                    <a href="#" class="m-slider__a mt15 m-link-arrow" data-swiper-parallax="-400">
+                                        Узнать больше
+                                        {{Icon iconName="arrow" className="icon-green"}}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide m-slider__slide">
+                                <div class="m-slider__l">
+                                    <div class="m-slider__l-bg m-img-cont">
+                                        <img src="%=static=%img/content/bg-1.jpg" alt="">
+                                    </div>
+                                    <div class="m-slider__t m-title-1 mb10" data-swiper-parallax="-200">
+                                            Ванная комната из керамики
+                                    </div>
+                                    <div class="m-slider__d m-text" data-swiper-parallax="-300">
+                                            Купите раковину и получите в подарок 
+                                            кран из керамики
+                                            данное предложение действует 2 дня
+                                    </div>
+                                    <a href="#" class="m-slider__a mt15 m-link-arrow" data-swiper-parallax="-400">
+                                        Узнать больше
+                                        {{Icon iconName="arrow" className="icon-green"}}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide m-slider__slide">
+                                <div class="m-slider__l">
+                                    <div class="m-slider__l-bg m-img-cont">
+                                        <img src="%=static=%img/content/bg-1.jpg" alt="">
+                                    </div>
+                                    <div class="m-slider__t m-title-1 mb10" data-swiper-parallax="-200">
+                                            Ванная комната из керамики
+                                    </div>
+                                    <div class="m-slider__d m-text" data-swiper-parallax="-300">
+                                            Купите раковину и получите в подарок 
+                                            кран из керамики
+                                            данное предложение действует 2 дня
+                                    </div>
+                                    <a href="#" class="m-slider__a mt15 m-link-arrow" data-swiper-parallax="-400">
+                                        Узнать больше
+                                        {{Icon iconName="arrow" className="icon-green"}}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-slider-pag"></div>       
+                    </div>
+                    
+                    <div class="m-slider__r">
+                        <div class="m-slider__item" style="background-image: url(%=static=%img/content/1.png)">
+                            <div class="label orange" data-discount="10">
+                                скидка 
+                                <span class="dcount__val"></span>
+                            </div>
+                            
+                            <div class="m-slider__item-t m-title-4">Кран + раковина</div>
+                            <div class="m-slider__item-d before_g m-text">Предложение действует до 14 января</div>
+                            <a href="#" class="m-slider__item-a m-link-arrow">
+                                {{Icon iconName="arrow" className="icon-green"}}
+                            </a>
+                        </div>
+                        <div class="m-slider__item blue" style="background-image: url(%=static=%img/content/2.png)">
+                            <div class="label green" data-discount="10">
+                                товар дня 
+                                <span class="dcount__val"></span>
+                            </div>
+                            
+                            <div class="m-slider__item-t m-title-4">
+                                    Раковина из мрамора! <br>
+                                    37 850 руб.
+                            </div>
+                            <a href="#" class="m-slider__item-a m-link-arrow">
+                                {{Icon iconName="arrow" className="icon-white"}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+            
+                    <div class="prods">
+                        <div class="prods__top  mb15">
+                            <div class="m-title-2">
+                                Новинки
+                            </div>
+                            <div class="slider-button__container">
+                                <div class="slider-button slider-button-prev new-slider-prev">
+                                    {{Icon iconName="arrow"}}
+                                </div>
+                                <div class="slider-button slider-button-next new-slider-next">
+                                    {{Icon iconName="arrow"}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new__slider prod-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="prods">
+                        <div class="prods__top  mb15">
+                            <div class="m-title-2">
+                                Товары со скидкой
+                            </div>
+                            <div class="slider-button__container">
+                                <div class="slider-button slider-button-prev dc-slider-prev">
+                                    {{Icon iconName="arrow"}}
+                                </div>
+                                <div class="slider-button slider-button-next dc-slider-next">
+                                    {{Icon iconName="arrow"}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dc__slider prod-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                
+                                {{> item/prod-dc}}
+                                {{> item/prod-dc}}
+                                {{> item/prod-dc}}
+                                {{> item/prod-dc}}
+                                {{> item/prod-dc}}
+                                {{> item/prod-dc}}
+                                {{> item/prod-dc}}
+                                {{> item/prod-dc}}
+                                {{> item/prod-dc}}
+                                {{> item/prod-dc}}
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="prods">
+                        <div class="prods__top  mb15">
+                            <div class="m-title-2">
+                                    Популярные товары
+                            </div>
+                            <div class="slider-button__container">
+                                <div class="slider-button slider-button-prev pop-slider-prev">
+                                    {{Icon iconName="arrow"}}
+                                </div>
+                                <div class="slider-button slider-button-next pop-slider-next">
+                                    {{Icon iconName="arrow"}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pop__slider prod-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="common-text">
+                        <div class="html">
+                            
+                        </div>
+                        <div class="common-text__img">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <!-- {{> footer/footer}} -->
+
 
    
     {{> popup/popup}}

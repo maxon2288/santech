@@ -4,15 +4,50 @@ $(document).ready(function () {
 	popup ();
 	// forms();
 
-	var swiper = new Swiper('.slider', {
-		spaceBetween: 10,
+	var swiper = new Swiper('.m-slider', {
+		autoplay: {
+			delay: 5000,
+		},
+		parallax: true,
+		speed: 1600,
+		loop: true,
+		keyboard: {
+			enabled: true,
+		},
+		pagination: {
+			el: '.m-slider-pag',
+			clickable: true,
+		},
+		mousewheel: true,
+	});
+	
+	$(".prod-slider").find(".prod").addClass("swiper-slide");
+	var swiper = new Swiper('.new__slider', {
+		spaceBetween: 30,
+		slidesPerView: 3,
 		navigation: {
-			nextEl: '.slider-next',
-			prevEl: '.slider-prev',
+			nextEl: '.new-slider-next',
+			prevEl: '.new-slider-prev',
 		},
 	});
-
-
+	var swiper = new Swiper('.pop__slider', {
+		spaceBetween: 30,
+		slidesPerView: 3,
+		navigation: {
+			nextEl: '.pop-slider-next',
+			prevEl: '.pop-slider-prev',
+		},
+	});
+	var swiper = new Swiper('.dc__slider', {
+		spaceBetween: 30,
+		slidesPerView: 3,
+		navigation: {
+			nextEl: '.dc-slider-next',
+			prevEl: '.dc-slider-prev',
+		},
+	});
+	$('.collapsible').collapsible();
+	
 	$(document).ready(function() {
 		$('select').niceSelect();
 	});
@@ -40,7 +75,21 @@ $(document).ready(function () {
 			},  
          });
 	 });
+	 $(".cat__item").each(function() {
+		var title = $(this).text();
+		$(this).attr("title", title);
+	 });
 
+	 $(".m-img-cont").each(function() {
+		var image = $(this).find("img").attr('src');
+		$(this).css("background-image", "url("+image+")")
+	 });
+
+	 $(".label").each(function() {
+		var discount = $(this).attr("data-discount");
+		$(this).find(".dcount__val").text(" " +discount + "%");
+	 });
+	 
 	 $(document).on('click', '.number-input-container .number-increment', function(e) {
         let $input = $(this).siblings('.number-input'),
             val = parseInt($input.val()),
@@ -58,6 +107,13 @@ $(document).ready(function () {
 		let temp = val - step;
 		$input.val(temp >= min ? temp : min);
 		$(".number-result").text($input.val());
-    });
+	});
+	
+
+	$("body").on("click", ".like", function()  {
+		$(this).toggleClass("liked");
+		$(this).find(".before").toggleClass("liked");
+	});
+	
 	 
 })
