@@ -8,6 +8,7 @@ $(document).ready(function () {
 		autoplay: {
 			delay: 5000,
 		},
+		spaceBetween: 5,
 		parallax: true,
 		speed: 1600,
 		loop: true,
@@ -20,6 +21,9 @@ $(document).ready(function () {
 		},
 		mousewheel: true,
 	});
+
+	var scene = $('.scene').get(0);
+	var parallaxInstance = new Parallax(scene);
 	
 	$(".prod-slider").find(".prod").addClass("swiper-slide");
 	var swiper = new Swiper('.new__slider', {
@@ -47,6 +51,7 @@ $(document).ready(function () {
 		},
 	});
 	$('.collapsible').collapsible();
+	// $('input[type="range"]').rangeslider();
 	
 	$(document).ready(function() {
 		$('select').niceSelect();
@@ -75,7 +80,8 @@ $(document).ready(function () {
 			},  
          });
 	 });
-	 $(".cat__item").each(function() {
+	 
+	 $(".tooltip").each(function() {
 		var title = $(this).text();
 		$(this).attr("title", title);
 	 });
@@ -108,12 +114,63 @@ $(document).ready(function () {
 		$input.val(temp >= min ? temp : min);
 		$(".number-result").text($input.val());
 	});
-	
 
-	$("body").on("click", ".like", function()  {
-		$(this).toggleClass("liked");
-		$(this).find(".before").toggleClass("liked");
+	if ( +$(".like-count").text() == 0) {
+		$(".like-count").css({
+			"opacity": "0"
+		})
+	}
+	if(+$(".like-count").text() != 0) {
+		$(".like-count").css({
+			"opacity": "1"
+		})	
+	}
+
+	$("body").on("click", ".like-trigger", function()  {
+		$(this).removeClass("like-trigger");
+		$(".like-count").text(+$(".like-count").text() + 1);
+		$(this).addClass("liked");
+		$(this).find(".before").toggleClass("likes");
+		if ( +$(".like-count").text() == 0) {
+			$(".like-count").css({
+				"visibility": "hidden",
+				"opacity": "0"
+			})
+		}
+		if(+$(".like-count").text() != 0) {
+			$(".like-count").css({
+				"visibility": "visible",
+				"opacity": "1"
+			})	
+		}
+	});
+	$("body").on("click", ".liked", function()  {
+		$(this).removeClass("liked");
+		$(".like-count").text(+$(".like-count").text() - 1);
+		$(this).addClass("like-trigger");
+		$(this).find(".before").toggleClass("likes");
+		if ( +$(".like-count").text() == 0) {
+			$(".like-count").css({
+				"opacity": "0"
+			})
+		}
+		if(+$(".like-count").text() != 0) {
+			$(".like-count").css({
+				"opacity": "1"
+			})	
+		}
 	});
 	
+	$('.range-slider').rangeslider({
+		polyfill:false,
+		// onInit:function(){
+		// 	$('.header .pull-right').text($('input[type="range"]').val()+'K');
+		// },
+		// onSlide:function(position, value){
+		// 	$('.header .pull-right').text(value+'K');
+		// },
+		// onSlideEnd:function(position, value){
+		// }
+	});
 	 
 })
