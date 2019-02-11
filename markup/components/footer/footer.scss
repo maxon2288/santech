@@ -36,6 +36,9 @@
             width: 100%;
             margin-left: 40px;
         }
+        &:active {
+            transform: translateY(1px);
+        }
     }
     &__top-menu {
         max-width: 900px;

@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+    {{> header/header}}
+
+    
+    
+    <div class="wrapper">
+        <div class="container">
+            
+            <div class="wrapper">
+                <div class="sign">
+                    <div class="sign__left">
+                        <div class="sign__t m-title-1">
+                            Регистрация
+                        </div>
+                        <div class="sign__imgs scene">
+                            <img src="%=static=%img/content/ellips-blue.png" alt="">
+                            <img src="%=static=%img/content/ellips-green.png" class="sign__imgs-pos " data-depth="-0.8" alt="">
+                        </div>
+                    </div>
+                    <div class="sign__right">
+                        <form action="#" class="sign__form form-reg">
+                            <div class="sign__form-bg">
+                                <img src="static/img/content/form-bg-1.png" alt="#">
+                            </div>
+
+                            <div class="m-field__container mb15">
+                                <input name="name" type="text" class="m-field" placeholder="Введите ваше имя">
+                                {{Icon iconName="user"}}
+                            </div>
+                            <div class="m-field__container mb15">
+                                <input name="phone" type="text" class="m-field" placeholder="Введите ваш телефон">
+                                {{Icon iconName="phone"}}
+                            </div>
+                            <div class="m-field__container mb15">
+                                <input name="password" id="password-again" type="text" class="m-field" placeholder="Придумайте пароль" autocomplete="off">
+                                {{Icon iconName="password"}}
+                            </div>
+                            <div class="m-field__container mb15">
+                                <input name="passwordAgain" type="text" class="m-field" placeholder="Повторите пароль" autocomplete="off">
+                                {{Icon iconName="password"}}
+                            </div>
+
+
+                            <button class="m-button mt20 sign__button">
+                                зарегистироваться
+                            </button>
+                            <a href="sign_in.html" class="sign__link mt20 mb15">
+                                войти
+                            </a>
+                            <div class="m-text-2 before_g sign__bottom-text">
+                                Я соглашаюсь с правилами использования 
+
+                                сервиса
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    {{> footer/footer}}
+   
+    {{> popup/popup}}
+    {{> scripts/scripts}}
+    
+</body>
+</html>

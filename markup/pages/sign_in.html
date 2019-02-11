@@ -1,0 +1,84 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+    {{> header/header}}
+
+    
+    
+    <div class="wrapper">
+        <div class="container">
+            
+            <div class="wrapper">
+                <div class="sign">
+                    <div class="sign__left">
+                        <div class="sign__t m-title-1">
+                                Вход
+                        </div>
+                        <div class="sign__imgs scene pos">
+                            <img src="%=static=%img/content/ellips-blue.png" alt="">
+                            <img src="%=static=%img/content/ellips-green.png" class="sign__imgs-pos " data-depth="-0.8" alt="">
+                        </div>
+                    </div>
+                    <div class="sign__right">
+                        <form action="#" class="sign__form form-reg">
+
+                            <div class="sign__form-bg">
+                                <img src="static/img/content/form-bg-1.png" alt="#">
+                            </div>
+
+                            <div class="m-field__container mb15">
+                                <input name="phone" type="text" class="m-field" placeholder="Введите ваш телефон">
+                                {{Icon iconName="phone"}}
+                            </div>
+                            <div class="m-field__container mb15">
+                                <input name="password" type="text" class="m-field" placeholder="Введите пароль" autocomplete="off">
+                                {{Icon iconName="password"}}
+                            </div>
+                            
+                            <div class="sign__features mt10 mb15">
+                                <label class="m-check">
+                                    <input type="checkbox" name="checker" checked>
+                                    <div class="m-check__psevdo">
+                                        {{Icon iconName="checkOn"}}
+
+                                    </div>
+                                    <p class="m-check__text">Запомнить меня</p>
+                                </label>
+
+                                <a href="#" class="m-link">
+                                        Не можете войти?
+                                </a>
+                            </div>
+                            
+                            <button class="m-button mt20 sign__button">
+                                Войти
+                            </button>
+                            <a href="reg.html" class="sign__link mt20 mb15">
+                                регистрация
+                            </a>
+                            <div class="m-text-2 sign__bottom-text-2">
+                                Входя в свой профиль вы принимаете
+                                <a href="#">
+                                    Условия использования сайта
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    {{> footer/footer}}
+   
+    {{> popup/popup}}
+    {{> scripts/scripts}}
+    
+</body>
+</html>

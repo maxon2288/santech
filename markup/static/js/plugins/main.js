@@ -1,5 +1,52 @@
 
 $(document).ready(function () {
+
+	$('input[name="phone"]').mask("+ 7 000 000 00 00");
+
+	//VALIDATION---------------------------
+	$('.form-reg').each(function() {
+        var it = $(this);
+         it.validate({
+			rules: {
+				name: {
+					required: true,
+				},
+				phone: {
+					required: true,
+					minlength: 17,
+				},
+				password: {
+					required: true,
+					minlength: 5,
+				},
+				passwordAgain: {
+					required: true,
+					equalTo: "#password-again",
+				},
+			},
+
+			errorPlacement: function (error, element) {
+			},
+
+			submitHandler: function() {
+				$.ajax({
+					success: function(){
+						it.find("input, textarea").val("");
+						it.find("input, textarea").removeClass('is-focus');
+					}
+				});
+			},  
+		});
+	});
+	$(".m-field").change(function() {
+		if ($(this).val().length > 0) {
+			$(this).addClass("is-focus");
+		} else {
+			$(this).removeClass("is-focus");
+		}
+	});	
+	//VALIDATION---------------------------
+	
 	$("body").css({'visibility': "visible", "opacity": "1"});
 	popup ();
 	// forms();
@@ -22,9 +69,21 @@ $(document).ready(function () {
 		mousewheel: true,
 	});
 
-	var scene = $('.scene').get(0);
-	var parallaxInstance = new Parallax(scene);
-	
+	if ($('.scene').length > 0) {
+		var scene = $('.scene').get(0);
+		var parallaxInstance = new Parallax(scene);
+
+	}
+	$(".m-field").each(function() {
+		var plh = $(this).attr("placeholder");
+		$(this).closest(".m-field__container").append(`
+		<div class="placeholder">${plh}</div>
+		`)
+	});
+	$(".m-field__container").click(function() {
+		$(this).find("input").focus();
+	});
+
 	$(".prod-slider").find(".prod").addClass("swiper-slide");
 	var swiper = new Swiper('.new__slider', {
 		spaceBetween: 30,
@@ -57,29 +116,7 @@ $(document).ready(function () {
 		$('select').niceSelect();
 	});
 
-	$('.form').each(function() {
-        var it = $(this);
-         it.validate({
-			rules: {
-				number: {
-					digits: true,
-					required: false,
-					maxlength: 4,
-				}
-			},
-
-			errorPlacement: function (error, element) {
-			},
-
-			submitHandler: function() {
-				$.ajax({
-					success: function(){
-						var rowId = it.closest('tr').data("id");
-					}
-				});
-			},  
-         });
-	 });
+	
 	 
 	 $(".tooltip").each(function() {
 		var title = $(this).text();
@@ -161,16 +198,48 @@ $(document).ready(function () {
 		}
 	});
 	
-	$('.range-slider').rangeslider({
-		polyfill:false,
-		// onInit:function(){
-		// 	$('.header .pull-right').text($('input[type="range"]').val()+'K');
-		// },
-		// onSlide:function(position, value){
-		// 	$('.header .pull-right').text(value+'K');
-		// },
-		// onSlideEnd:function(position, value){
-		// }
-	});
+	// $('.range-slider').rangeslider({
+	// 	polyfill:false,
+	// 	// onInit:function(){
+	// 	// 	$('.header .pull-right').text($('input[type="range"]').val()+'K');
+	// 	// },
+	// 	// onSlide:function(position, value){
+	// 	// 	$('.header .pull-right').text(value+'K');
+	// 	// },
+	// 	// onSlideEnd:function(position, value){
+	// 	// }
+	// });
+
+	if ($('#slider').length > 0) {
+		var slider = document.getElementById('slider');
+		var rangeMin = $("#slider").data("min")
+		var rangeMax = $("#slider").data("max")
+		var rangeStep = $("#slider").data("step")
+		$(".output-left").text(parseFloat(rangeMin).toFixed(0));
+		$(".output-right").text(parseFloat(rangeMax).toFixed(0));
+		noUiSlider.create(slider, {
+			start: [rangeMin, rangeMax],
+			connect: true,
+			step: rangeStep,
+			range: {
+				'min': rangeMin,
+				'max': rangeMax
+			},
+			format: wNumb({
+				decimals: 0
+			})
+		});
+	
+		$(".noUi-handle-lower").mousemove(function() {
+			var val = $(this).find("span").text();
+			$(".output-left").text(parseFloat(val).toFixed(0));
+		});
+		$(".noUi-handle-upper").mousemove(function() {
+			var val = $(this).find("span").text();
+			$(".output-right").text(parseFloat(val).toFixed(0));
+		});
+	}
+
+
 	 
 })

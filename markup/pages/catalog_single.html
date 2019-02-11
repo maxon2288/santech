@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+    {{> header/header}}
+
+    
+    
+    <div class="wrapper">
+        <div class="container">
+
+            <div class="sidebar">
+                {{> sidebar/collapsible}}
+            </div>
+            
+
+            <div class="content-cont">
+
+                <div class="content">
+                    <div class="top-features">
+                        <a href="#" class="page-back">
+                            <div class="slider-button slider-button-prev">
+                                {{Icon iconName="arrow"}}
+                            </div>
+                            Назад
+                        </a>
+                        <div class="top-features__line">
+
+                        </div>
+                        {{> bread/bread}}
+                    </div>
+
+                    <div class="prods">
+                        <div class="prods__top  mb15">
+                            <div class="m-title-2">
+                                Сопутствующие товары
+                            </div>
+                            <div class="slider-button__container">
+                                <div class="slider-button slider-button-prev new-slider-prev">
+                                    {{Icon iconName="arrow"}}
+                                </div>
+                                <div class="slider-button slider-button-next new-slider-next">
+                                    {{Icon iconName="arrow"}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new__slider prod-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                                {{> item/prod}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="common-text">
+                        <div class="html__container">
+                            <h2>Смесители</h2>
+                            <div class="html">
+                                <p>Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Таким образом рамки и место обучения кадров позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Таким образом постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. С другой стороны новая модель организационной деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Таким образом рамки и место обучения кадров позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    {{> footer/footer}}
+   
+    {{> popup/popup}}
+    {{> scripts/scripts}}
+    
+</body>
+</html>

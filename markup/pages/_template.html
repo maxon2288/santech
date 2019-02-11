@@ -5,8 +5,34 @@
 </head>
 <body class="page" style="visibility: hidden;opacity: 0;">
     %=symbols=%
-    
+    {{> header/header}}
 
+    
+    
+    <div class="wrapper">
+        <div class="container">
+            
+            <div class="sidebar">
+                {{> sidebar/collapsible}}
+            </div>
+
+            <div class="content-cont">
+
+                <div class="top">
+                   
+                </div>
+                
+                <div class="content">
+                    
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    {{> footer/footer}}
+   
     {{> popup/popup}}
     {{> scripts/scripts}}
     

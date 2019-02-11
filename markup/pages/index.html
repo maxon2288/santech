@@ -11,12 +11,13 @@
     
     <div class="wrapper">
         <div class="container">
-            
-            {{> sidebar/sidebar}}
+            <div class="sidebar">
+                {{> sidebar/collapsible}}
+                {{> sidebar/filter}}
+            </div>
 
             <div class="content-cont">
                     
-
                 <div class="top">
                     <div class="swiper-container m-slider"> 
                         <div class="swiper-wrapper">

@@ -24,6 +24,9 @@
             font-size: 14px;
             margin: 0 10px;
         }
+        svg {
+            fill: #037CE3;
+        }
     }
     &__logo {
         display: flex;
@@ -32,9 +35,10 @@
             margin-right: 22px;
         }
         &-text {
-            min-width: 230px;
-            max-width: 230px;
+            min-width: 200px;
+            max-width: 200px;
             // width: 100%;
+            font-size: 14px;    
             line-height: normal;
         }
         &:active {
@@ -83,10 +87,11 @@
         display: flex;
         justify-content: space-between;
         min-width: 550px;
-        &-item {
+        &-item { 
             font-weight: 500;
             color: #4A4A4A;
             transition: 0.2s;
+            font-size: 16px;
             &:hover {
                 color: $blue;
             }
@@ -118,6 +123,9 @@
             flex-direction: column;
             margin-left: 22px;
             transition: 0.2s;
+            div {
+
+            }
             span {
                 color: #797979;
                 font-size: 14px;
