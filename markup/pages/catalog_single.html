@@ -15,7 +15,6 @@
             <div class="sidebar">
                 {{> sidebar/collapsible}}
             </div>
-            
 
             <div class="content-cont">
 
@@ -31,6 +30,325 @@
 
                         </div>
                         {{> bread/bread}}
+                    </div>
+
+                    <div class="product">
+                        <div class="product__left">
+                            <div class="swiper-container product-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide m-img-cont">
+                                        <img src="%=static=%img/content/3.png" data-orig="%=static=%img/content/prod-zoom.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide m-img-cont">
+                                        <img src="%=static=%img/content/3.png" data-orig="%=static=%img/content/prod-zoom.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide m-img-cont">
+                                        <img src="%=static=%img/content/3.png" data-orig="%=static=%img/content/prod-zoom.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide m-img-cont">
+                                        <img src="%=static=%img/content/3.png" data-orig="%=static=%img/content/prod-zoom.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide m-img-cont">
+                                        <img src="%=static=%img/content/3.png" data-orig="%=static=%img/content/prod-zoom.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide m-img-cont">
+                                        <img src="%=static=%img/content/3.png" data-orig="%=static=%img/content/prod-zoom.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="product-slider-button product-slider-button-prev">
+                                    {{Icon iconName="left-arrow"}}
+                                </div>
+                                <div class="product-slider-button product-slider-button-next">
+                                    {{Icon iconName="left-arrow"}}
+                                </div>
+                            </div>
+                            <div class="swiper-container product-thumbs">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide m-img-cont">
+                                        <img src="%=static=%img/content/3.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide m-img-cont">
+                                        <img src="%=static=%img/content/3.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide m-img-cont">
+                                        <img src="%=static=%img/content/3.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide m-img-cont">
+                                        <img src="%=static=%img/content/3.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide m-img-cont">
+                                        <img src="%=static=%img/content/3.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide m-img-cont">
+                                        <img src="%=static=%img/content/3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__right">
+                            <div class="m-title-2">
+                                Смеситель для кухни Lemark 
+                                Comfort к фильтру питьевой воды
+                                LM3061C
+                            </div>
+                            <div class="exis mt10 mb20">
+                                {{Icon iconName="exis" className="exis-svg"}}
+                                {{Icon iconName="noexis" className="noexis-svg"}}
+                                В наличии
+                            </div>
+                            <div class="product__info">
+                                <b>Страна:</b>
+                                <p>Чехия</p>
+                            </div>
+                            <div class="product__desc">
+                                <b>Страна:</b>
+                                <p>Чешская компания LEMARK производит высококачественную сантехнику. Популярность её на российском рынке обусловлена тем, что при вполне европейском качестве, цены на продукцию Lemark более демократичны и привлекательны.</p>
+                            </div>
+
+                            <div class="product__price">
+                                <div class="product__price-t count-res" data-price="7850">
+                                        <span>7850</span> руб.
+                                </div>
+                                <div class="product__count">
+                                    <div class="input-cont">
+                                        <button type="button" class="input-button input-de">
+                                            {{Icon iconName="minus"}}
+                                        </button>
+                                    
+                                        <div class="input-val"></div>
+                                        
+                                        <input type="number" class="input-input" step="1" value="1" min="1" max="100">
+                                    
+                                        <button type="button" class="input-button input-i">
+                                            {{Icon iconName="plus"}}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product__features">
+                                <div class="m-button add-basket mr20">
+                                    {{Icon iconName="basket"}}
+                                    В корзину
+                                </div>
+                                <div class="m-button-r mr10">
+                                    {{Icon iconName="comprison"}}
+                                </div>
+                                <div class="m-button-r mr10">
+                                    {{Icon iconName="like"}}
+                                </div>
+                                <div class="m-button-r">
+                                    {{Icon iconName="print"}}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="reduction tabs-container">
+                        <div class="tabs mb20">
+                            <a href="tab1" class="tabs-button tab">Комплектация</a>
+                            <a href="tab2" class="tabs-button tab">Характеристики</a>
+                            <a href="tab3" class="tabs-button tab">Гарантия</a>
+                            <a href="tab4" class="tabs-button tab active">Отзывы</a>
+                        </div>
+                        <div class="tabs__container">
+                            <div class="reduction__content cont-tab tab1">
+                                <div class="reduction__set">
+                                    <label class="reduction__set-item" data-price="7090">
+                                        <div class="reduction__check">
+                                            <div class="m-check">
+                                                <input type="checkbox" name="checker">
+                                                <div class="m-check__psevdo">
+                                                    {{Icon iconName="checkOn"}}
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="reduction__img m-img=cont">
+                                            <img src="%=static=%img/content/prod-4.png" alt="">
+                                        </div>
+                                        <div class="reduction__content">
+                                            <div class="reduction__desc">
+                                                Смеситель для кухни Lemark Comfort с подключением к фильтру питьевой воды LM3061C
+                                            </div>
+                                            <div class="reduction__info">
+                                                1 x <b>7090 руб.</b>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="reduction__set-item" data-price="7090">
+                                        <div class="reduction__check">
+                                            <div class="m-check">
+                                                <input type="checkbox" name="checker">
+                                                <div class="m-check__psevdo">
+                                                    {{Icon iconName="checkOn"}}
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="reduction__img m-img=cont">
+                                            <img src="%=static=%img/content/prod-4.png" alt="">
+                                        </div>
+                                        <div class="reduction__content">
+                                            <div class="reduction__desc">
+                                                Смеситель для кухни Lemark Comfort с подключением к фильтру питьевой воды LM3061C
+                                            </div>
+                                            <div class="reduction__info">
+                                                1 x <b>7090 руб.</b>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="reduction__set-item" data-price="7090">
+                                        <div class="reduction__check">
+                                            <div class="m-check">
+                                                <input type="checkbox" name="checker">
+                                                <div class="m-check__psevdo">
+                                                    {{Icon iconName="checkOn"}}
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="reduction__img m-img=cont">
+                                            <img src="%=static=%img/content/prod-4.png" alt="">
+                                        </div>
+                                        <div class="reduction__content">
+                                            <div class="reduction__desc">
+                                                Смеситель для кухни Lemark Comfort с подключением к фильтру питьевой воды LM3061C
+                                            </div>
+                                            <div class="reduction__info">
+                                                1 x <b>7090 руб.</b>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="reduction__content cont-tab tab3">
+                                <div class="warr">
+                                    <div class="html__container">
+                                        <h5>
+                                            Условия гарантии:
+                                        </h5>
+                                        <p>Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки модели развития. </p>
+                                        <p>Разнообразный и богатый опыт консультация с широким активом влечет за собой процесс внедрения и модернизации модели развития. Идейные соображения высшего порядка, а также сложившаяся структура организации способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям.</p>
+                                        <p>Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Таким образом рамки и место обучения кадров позволяет оценить значение системы обучения кадров, соответствует насущным потребностям</p>
+    
+    
+                                        <h5>Гарантия не распространяется:</h5>
+                                        <ul>
+                                            <li>Потеря изделием своих эксплуатационных качеств в следствие любых механических повреждений, наличие инородных тел, окалины, ржавчины и ругих элементов.</li>
+                                            <li>Использование запасных частей не Лемарк.</li>
+                                            <li>Возникновение дефектов вследствие неправильного монажа/демонтажа/ремонта.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+    
+                            </div>
+                            <div class="reduction__content cont-tab tab2">
+                                <div class="m-table">
+                                    <table>
+                                        <tr>
+                                            <th colspan="100">Наименование</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Артикул</td>
+                                            <td>43798178</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Страна производитель</td>
+                                            <td>Чехия</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Бренд</td>
+                                            <td>Lemark</td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <th colspan="100">Общие характеристики</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Тип</td>
+                                            <td>Одноручковый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Назначение</td>
+                                            <td>Для кухни</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Цвет</td>
+                                            <td>Хром</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Механизм</td>
+                                            <td>Рычажное</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Производитель картриджа</td>
+                                            <td>кран для питьевой воды, подключение фильтра для воды,
+                                                    система снижения шума</td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <th colspan="100">Габариты</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Длина излива (см)</td>
+                                            <td>19.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Назначение</td>
+                                            <td>22.15</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Высота излива (см)</td>
+                                            <td>19.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Длина излива (см)</td>
+                                            <td>134</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="reduction__content cont-tab tab4 active">
+                                {{> reviews/reviews}}
+                            </div>  
+                        </div>
+                    </div>
+
+                    <div class="servs">
+                        <div class="servs__top  mb15">
+                            <div class="m-title-2">
+                                Сопутствующие товары
+                            </div>
+                            <div class="slider-button__container">
+                                <div class="slider-button slider-button-prev pop-slider-prev">
+                                    {{Icon iconName="arrow"}}
+                                </div>
+                                <div class="slider-button slider-button-next pop-slider-next">
+                                    {{Icon iconName="arrow"}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pop__slider prod-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                {{> item/serv}}
+                                {{> item/serv}}
+                                {{> item/serv}}
+                                {{> item/serv}}
+                                {{> item/serv}}
+                                {{> item/serv}}
+                                {{> item/serv}}
+                                {{> item/serv}}
+                                {{> item/serv}}
+                                {{> item/serv}}
+                                {{> item/serv}}
+                            </div>
+                        </div>
+                        
                     </div>
 
                     <div class="prods">
@@ -72,12 +390,9 @@
                         </div>
                     </div>
                     
-                    
                 </div>
             </div>
-
         </div>
-        
     </div>
 
     {{> footer/footer}}

@@ -38,7 +38,8 @@ $(document).ready(function () {
 			},  
 		});
 	});
-	$(".m-field").change(function() {
+
+	$(".m-field, .m-field-2").change(function() {
 		if ($(this).val().length > 0) {
 			$(this).addClass("is-focus");
 		} else {
@@ -69,22 +70,108 @@ $(document).ready(function () {
 		mousewheel: true,
 	});
 
+	$('.zoom-image').each(function(){
+		var originalImagePath = $(this).find('img').attr('data-orig');
+		$(this).zoom({
+			url: originalImagePath,
+			magnify: 1
+		});
+		$(this).find(".zoomImg").wrap('<div class="product-zoom-img"></div>');
+	});
+
+		
+	var galleryThumbs = new Swiper('.product-thumbs', {
+		spaceBetween: 10,
+		slidesPerView: 4,
+		grabCursor: true,
+		loopedSlides: 5, //looped slides should be the same
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+	});
+	var galleryTop = new Swiper('.product-slider', {
+		spaceBetween: 10,
+		grabCursor: true,
+		loopedSlides: 5, //looped slides should be the same
+		navigation: {
+			nextEl: '.product-slider-button-next',
+			prevEl: '.product-slider-button-prev',
+		},
+		thumbs: {
+			swiper: galleryThumbs,
+		},
+	});
+
 	if ($('.scene').length > 0) {
 		var scene = $('.scene').get(0);
 		var parallaxInstance = new Parallax(scene);
-
 	}
-	$(".m-field").each(function() {
+	$(".m-field, .m-field-2").each(function() {
 		var plh = $(this).attr("placeholder");
 		$(this).closest(".m-field__container").append(`
 		<div class="placeholder">${plh}</div>
 		`)
 	});
+
+	//tabs------------
+	$(".tabs").each(function() {
+		$('.tab').click(function(e) {
+			e.preventDefault();
+			var it = $(this);
+			var href = it.attr("href");
+			it.closest(".tabs-container").find(".tab").removeClass("active");
+			it.addClass("active");
+			$(".cont-tab").removeClass("active");
+			it.closest(".tabs-container").find("." + href).addClass('active');
+			it.closest('.tabs-container').find("." + href + " input").val('');
+			it.closest('.tabs-container').find("." + href + " input").removeClass("is-focus");
+		});
+	});
+	//tabs--------------
+
+	$(".tab-input-cont").click(function() {
+		var it = $(this);
+		it.find(".tab-input:checked").each(function() {
+			if ($(this).val() == "tab1") {
+				$(".cont-tab").removeClass("active");
+				$(".input-tab1").addClass("active");
+				$(".input-tab1").find("input").val('');
+				$(".input-tab1").find("input").removeClass('is-focus');
+				$(".input-tab1").find("input").addClass('required');
+			} else {
+				$(".input-tab1").find("input").removeClass('required');				
+			}
+			if ($(this).val() == "tab2") {
+				$(".cont-tab").removeClass("active");
+				$(".input-tab2").addClass("active");
+				$(".input-tab2").find("input").val('');
+				$(".input-tab1").find("input").removeClass('is-focus');
+				$(".input-tab1").find("input").addClass('required');
+			} else {
+				$(".input-tab1").find("input").removeClass('required');				
+			}
+			if ($(this).val() == "tab3") {
+				$(".cont-tab").removeClass("active");
+				$(".input-tab3").addClass("active");
+				$(".input-tab1").find("input").removeClass('is-focus');
+				$(".input-tab1").find("input").addClass('required');
+			} else {
+				$(".input-tab1").find("input").removeClass('required');				
+			}
+		});
+	});
+
+
 	$(".m-field__container").click(function() {
 		$(this).find("input").focus();
 	});
 
+	$(".tolltip").each(function() {
+		var title = $(this).text();
+		$(this).attr("title", title);
+	});
+
 	$(".prod-slider").find(".prod").addClass("swiper-slide");
+	$(".prod-slider").find(".serv").addClass("swiper-slide");
 	var swiper = new Swiper('.new__slider', {
 		spaceBetween: 30,
 		slidesPerView: 3,
@@ -123,36 +210,75 @@ $(document).ready(function () {
 		$(this).attr("title", title);
 	 });
 
-	 $(".m-img-cont").each(function() {
-		var image = $(this).find("img").attr('src');
-		$(this).css("background-image", "url("+image+")")
-	 });
+	//  $(".m-img-cont").each(function() {
+	// 	var image = $(this).find("img").attr('src');
+	// 	$(this).css("background-image", "url("+image+")")
+	//  });
 
 	 $(".label").each(function() {
 		var discount = $(this).attr("data-discount");
 		$(this).find(".dcount__val").text(" " +discount + "%");
 	 });
+
+
+	 // NUMBER INPUT
 	 
-	 $(document).on('click', '.number-input-container .number-increment', function(e) {
-        let $input = $(this).siblings('.number-input'),
+	 $(".input-cont").each(function() {
+		var it = $(this);
+		let $input = $(this).find('.input-input'),
+
+			val = parseInt($input.val()),
+			min = parseInt($input.attr('min')),
+			step = parseInt($input.attr('step'));
+		it.find(".input-val").text($input.val());
+	 });
+
+	 $(document).on('click', '.input-i', function(e) {
+		var it = $(this).closest(".input-cont");
+		let $input = $(this).siblings('.input-input'),
+		
             val = parseInt($input.val()),
             max = parseInt($input.attr('max')),
             step = parseInt($input.attr('step'));
 		let temp = val + step;
 		$input.val(temp <= max ? temp : max);
-		$(".number-result").text($input.val());
-    });
-    $(document).on('click', '.number-input-container .number-decrement', function(e) {
-        let $input = $(this).siblings('.number-input'),
-            val = parseInt($input.val()),
-            min = parseInt($input.attr('min')),
-            step = parseInt($input.attr('step'));
+		$(".input-val").text($input.val());
+	});
+	
+    $(document).on('click', '.input-de', function(e) {
+		var it = $(this).closest(".input-cont");
+		let $input = $(this).siblings('.input-input'),
+
+			val = parseInt($input.val()),
+			min = parseInt($input.attr('min')),
+			step = parseInt($input.attr('step'));
 		let temp = val - step;
 		$input.val(temp >= min ? temp : min);
-		$(".number-result").text($input.val());
+		$(".input-val").text($input.val());
 	});
+	//NUMBER
 
-	if ( +$(".like-count").text() == 0) {
+	//basket
+	
+	// $(".basket-i").click(function() {
+	// 	var it = $(this).closest("tr");
+	// 	var val = it.find(".input-input").val();
+	// 	var price = it.attr("data-price");
+	// 	it.find(".basket-result span").text(+val * +price);
+	// });
+
+
+
+
+
+
+
+
+
+	$(".lightgallery").lightGallery(); 
+
+	
+	if (+$(".like-count").text() == 0) {
 		$(".like-count").css({
 			"opacity": "0"
 		})
