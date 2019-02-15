@@ -101,7 +101,7 @@ $(document).ready(function () {
 		},
 	});
 
-	if ($('.scene').length > 0) {
+	if ($('.scene').length != 0) {
 		var scene = $('.scene').get(0);
 		var parallaxInstance = new Parallax(scene);
 	}
@@ -111,6 +111,24 @@ $(document).ready(function () {
 		<div class="placeholder">${plh}</div>
 		`)
 	});
+
+
+
+	$('.prod-delete').click(function() {
+		$(this).closest(".prod").remove();
+		if($(".prod").length < 1) {
+			$(".account-nolike").addClass("visible")
+		} else {
+			$(".account-nolike").removeClass("visible")
+		}
+	});
+	if($(".prod").length < 1) {
+		$(".account-nolike").addClass("visible")
+	} else {
+		$(".account-nolike").removeClass("visible")
+	}
+	
+	
 
 	//tabs------------
 	$(".tabs").each(function() {
@@ -126,8 +144,12 @@ $(document).ready(function () {
 			it.closest('.tabs-container').find("." + href + " input").removeClass("is-focus");
 		});
 	});
+	
+	$(document).on("click",".docs__delete", function()  {
+		$(this).closest(".docs__item").remove();
+	});
+	
 	//tabs--------------
-
 	$(".tab-input-cont").click(function() {
 		var it = $(this);
 		it.find(".tab-input:checked").each(function() {
@@ -158,6 +180,20 @@ $(document).ready(function () {
 				$(".input-tab1").find("input").removeClass('required');				
 			}
 		});
+	});
+
+	$(".face-cont").click(function() {
+		var it = $(this);
+		if (it.find(".face:checked").val() == "yur") {
+			$(".radio-yur").addClass("visible");
+			var radio = $(".radio-yur").find("input").attr("data-radio")
+			$(".radio-yur").find("input").attr("name", radio);				
+			$(".radio-yur").find("input").prop("checked", true);					
+		} else {
+			$(".radio-yur").removeClass("visible");
+			$(".radio-yur").find("input").attr("name", "noradio");				
+			$(".radio-first").find("input").prop("checked", true);				
+		}
 	});
 
 

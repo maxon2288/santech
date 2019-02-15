@@ -36,13 +36,6 @@
                     <div class="title-top">
                         <div class="m-title-1 mt10">
                             Оформление заказа 
-                            <div class="checkout__choice">
-                                <div class="tabs">
-                                    <a href="#" class="tabs-button">Физ.лицо</a>
-                                    <a href="#" class="tabs-button">Юр. лицо</a>
-                                    
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -135,173 +128,236 @@
 
 
                     <form action="#" class="deliv-form">
-                        <div class="deliv">
-                            <div class="m-title-2 mb20">
-                                Данные доставки
-                            </div>
-
-                            <div class="deliv__group">
-                                <div class="m-field__container">
-                                    <input type="text" class="m-field-2" placeholder="Отчество">
-                                </div>
-                                <div class="m-field__container">
-                                    <input type="text" class="m-field-2" placeholder="Отчество">
-                                </div>
-                                <div class="m-field__container">
-                                    <input type="text" class="m-field-2" placeholder="Отчество">
-                                </div>
-                                <div class="m-field__container">
-                                    <input type="text" class="m-field-2" placeholder="Отчество">
-                                </div>
-                            </div>
-
-                            <div class="deliv__radio">
-                                <div class="m-bold">
-                                    Способ оплаты:
-                                </div>
-
-                                <label class="m-radio">
-                                    <input type="radio" name="radio" checked>
-                                    <div class="m-radio__psevdo">
-                                        {{Icon iconName="radio"}}
-                                
+                        <div class="form-container">
+                            <div class="deliv">
+                                <div class="m-title-2 mb20">
+                                    Данные доставки
+    
+                                    <div class="checkout__choice">
+                                        <div class="tabs">
+                                            <label class="form-radio face-cont">
+                                                <input type="radio" class="face" name="check1">
+                                                <div class=" tabs-button">Физ.лицо</div>
+                                            </label>
+                                            <label class="form-radio tab-input-cont face-cont">
+                                                <input type="radio" class="face" name="check1" value="yur">
+                                                <div class=" tabs-button">Юр. лицо</div>
+                                            </label>
+                                        </div>
                                     </div>
-                                    <p class="m-radio__text">Запомнить меня</p>
-                                </label>
-
-                                <label class="m-radio">
-                                    <input type="radio" name="radio" checked>
-                                    <div class="m-radio__psevdo">
-                                        {{Icon iconName="radio"}}
-                                
+                                    
+                                </div>
+    
+                                <div class="form-container__group">
+                                    <div class="m-field__container">
+                                        <input type="text" class="m-field-2" placeholder="Имя">
                                     </div>
-                                    <p class="m-radio__text">Запомнить меня</p>
-                                </label>
-
-                                <label class="m-radio">
-                                    <input type="radio" name="radio" checked>
-                                    <div class="m-radio__psevdo">
-                                        {{Icon iconName="radio"}}
-                                
+                                    <div class="m-field__container">
+                                        <input type="text" class="m-field-2" placeholder="Фамилия">
                                     </div>
-                                    <p class="m-radio__text">Запомнить меня</p>
-                                </label>
-                                
-                            </div>
-
-                            <div class="tabs-container">
-                                <div class="tabs mb20">
-                                    <label class="form-radio tab-input-cont">
-                                        <input type="radio" class="tab-input" checked name="check" value="tab1">
-                                        <div class="tabs-button tab-input-psevo">Доставка курьером</div>
+                                    <div class="m-field__container">
+                                        <input type="text" class="m-field-2" placeholder="Отчество">
+                                    </div>
+                                    <div class="m-field__container">
+                                        <input type="text" name="phone" class="m-field-2" placeholder="Номер телефона">
+                                    </div>
+                                </div>
+    
+                                <div class="deliv__radio">
+                                    <div class="m-bold">
+                                        Способ оплаты:
+                                    </div>
+    
+                                    <label class="m-radio radio-first">
+                                        <input type="radio" name="radio5" checked>
+                                        <div class="m-radio__psevdo">
+                                            {{Icon iconName="radio"}}
+                                    
+                                        </div>
+                                        <p class="m-radio__text">Запомнить меня</p>
                                     </label>
-                                    <label class="form-radio tab-input-cont">
-                                        <input type="radio" class="tab-input" name="check" value="tab2">
-                                        <div class=" tabs-button">Доставка курьером</div>
+    
+                                    <label class="m-radio">
+                                        <input type="radio" name="radio5">
+                                        <div class="m-radio__psevdo">
+                                            {{Icon iconName="radio"}}
+                                    
+                                        </div>
+                                        <p class="m-radio__text">Запомнить меня</p>
                                     </label>
-                                    <label class="form-radio tab-input-cont">
-                                        <input type="radio" class="tab-input" name="check" value="tab3">
-                                        <div class=" tabs-button">Доставка курьером</div>
+    
+                                    <label class="m-radio">
+                                        <input type="radio" name="radio5">
+                                        <div class="m-radio__psevdo">
+                                            {{Icon iconName="radio"}}
+                                    
+                                        </div>
+                                        <p class="m-radio__text">Запомнить меня</p>
                                     </label>
+    
+                                    <label class="m-radio radio-yur">
+                                        <input type="radio" name="noradio" data-radio="radio5">
+                                        <div class="m-radio__psevdo">
+                                            {{Icon iconName="radio"}}
+                                    
+                                        </div>
+                                        <p class="m-radio__text">Расчетный счет</p>
+                                    </label>
+                                    
                                 </div>
-                                <div class="cont-tab input-tab1 active">
-                                    <div class="deliv__group">
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Имя">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Отчество">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Город">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Фамилия">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Страна">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Адрес">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="E-mail">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Телефон">
+    
+                                <div class="tabs-container">
+                                    <div class="tabs mb20">
+                                        <label class="form-radio tab-input-cont">
+                                            <input type="radio" class="tab-input" checked name="check" value="tab1">
+                                            <div class="tabs-button tab-input-psevo">Доставка курьером</div>
+                                        </label>
+                                        <label class="form-radio tab-input-cont">
+                                            <input type="radio" class="tab-input" name="check" value="tab2">
+                                            <div class=" tabs-button">Доставка курьером</div>
+                                        </label>
+                                        <label class="form-radio tab-input-cont">
+                                            <input type="radio" class="tab-input" name="check" value="tab3">
+                                            <div class=" tabs-button">Доставка курьером</div>
+                                        </label>
+                                    </div>
+    
+                                    <div class="cont-tab input-tab1">
+                                        <div class="form-container__group">
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" placeholder="Имя">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" placeholder="Отчество">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" placeholder="Город">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" placeholder="Фамилия">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" placeholder="Страна">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" placeholder="Адрес">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" placeholder="E-mail">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" placeholder="Телефон">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="cont-tab input-tab2 ">
-                                    <div class="deliv__group">
+                                    <div class="cont-tab input-tab2">
+                                        <div class="form-container__group">
+                                            <div class="deliv__col">
+                                                <div class="sort__select">
+                                                    <div class="sort__text">
+                                                        Город:
+                                                    </div>
+                                                    <select class="sort-select">
+                                                        <option value="value">Москваs</option>
+                                                        <option value="value">Москва</option>
+                                                        <option value="value">Москва</option>
+                                                        <option value="value">Москва</option>
+                                                    </select>
+                                                </div>
+        
+                                                <div class="deliv-radio-block mt30">
+                                                    <div class="m-bold">Адрес:</div>
+        
+                                                    <div class="deliv-radio-block__container">
+                                                        <label class="m-radio">
+                                                            <input type="radio" name="radio" checked>
+                                                            <div class="m-radio__psevdo">{{Icon iconName="radio"}}</div>
+                                                            <p class="m-radio__text">Visa/Mastercard</p>
+                                                        </label>
+                                                        <label class="m-radio">
+                                                            <input type="radio" name="radio" checked>
+                                                            <div class="m-radio__psevdo">{{Icon iconName="radio"}}</div>
+                                                            <p class="m-radio__text">Visa/Mastercard</p>
+                                                        </label>
+                                                        <label class="m-radio">
+                                                            <input type="radio" name="radio" checked>
+                                                            <div class="m-radio__psevdo">{{Icon iconName="radio"}}</div>
+                                                            <p class="m-radio__text">Visa/Mastercard</p>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cont-tab input-tab3 active">
                                         <div class="deliv__col">
-                                            <div class="sort__select">
-                                                <div class="sort__text">
-                                                    Город:
+                                            <div class="deliv__company">
+                                                <div class="m-bold mt10 mb20">
+                                                    Транспортная компания:
                                                 </div>
-                                                <select class="sort-select">
-                                                    <option value="value">Москваs</option>
-                                                    <option value="value">Москва</option>
-                                                    <option value="value">Москва</option>
-                                                    <option value="value">Москва</option>
-                                                </select>
+    
+                                                <div class="deliv__company-imgs">
+                                                    <label>
+                                                        <input type="radio" name="check2">
+                                                        <div class="deliv__company-img">
+                                                            <img src="%=static=%img/content/4.png" alt="">
+                                                        </div>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="check2">
+                                                        <div class="deliv__company-img">
+                                                            <img src="%=static=%img/content/4.png" alt="">
+                                                        </div>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="check2">
+                                                        <div class="deliv__company-img">
+                                                            <img src="%=static=%img/content/4.png" alt="">
+                                                        </div>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="check2">
+                                                        <div class="deliv__company-img">
+                                                            <img src="%=static=%img/content/4.png" alt="">
+                                                        </div>
+                                                    </label>
+                                                </div>
+        
                                             </div>
     
-                                            <div class="deliv-radio-block mt30">
-                                                <div class="m-bold">Адрес:</div>
-    
-                                                <div class="deliv-radio-block__container">
-                                                    <label class="m-radio">
-                                                        <input type="radio" name="radio" checked>
-                                                        <div class="m-radio__psevdo">{{Icon iconName="radio"}}</div>
-                                                        <p class="m-radio__text">das</p>
-                                                    </label>
-                                                    <label class="m-radio">
-                                                        <input type="radio" name="radio" checked>
-                                                        <div class="m-radio__psevdo">{{Icon iconName="radio"}}</div>
-                                                        <p class="m-radio__text">dsa</p>
-                                                    </label>
-                                                    <label class="m-radio">
-                                                        <input type="radio" name="radio" checked>
-                                                        <div class="m-radio__psevdo">{{Icon iconName="radio"}}</div>
-                                                        <p class="m-radio__text">dsa</p>
-                                                    </label>
+                                            <div class="form-container__group">
+                                                <div class="m-field__container">
+                                                    <input type="text" class="m-field-2 required" placeholder="Имя">
+                                                </div>
+                                                <div class="m-field__container">
+                                                    <input type="text" class="m-field-2 required" placeholder="Отчество">
+                                                </div>
+                                                <div class="m-field__container">
+                                                    <input type="text" class="m-field-2 required" placeholder="Город">
+                                                </div>
+                                                <div class="m-field__container">
+                                                    <input type="text" class="m-field-2 required" placeholder="Фамилия">
+                                                </div>
+                                                <div class="m-field__container">
+                                                    <input type="text" class="m-field-2 required" placeholder="Страна">
+                                                </div>
+                                                <div class="m-field__container">
+                                                    <input type="text" class="m-field-2 required" placeholder="Адрес">
+                                                </div>
+                                                <div class="m-field__container">
+                                                    <input type="text" class="m-field-2 required" placeholder="E-mail">
+                                                </div>
+                                                <div class="m-field__container">
+                                                    <input type="text" class="m-field-2 required" placeholder="Телефон">
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                     </div>
+                                    
                                 </div>
-                                <div class="cont-tab input-tab3">
-                                    <div class="deliv__group">
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Имя">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Отчество">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Город">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Фамилия">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Страна">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Адрес">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="E-mail">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" placeholder="Телефон">
-                                        </div>
-                                    </div>
-                                </div>
-                                
+                                                            
                             </div>
-                                                        
                         </div>
 
                         <button class="m-button mt30">

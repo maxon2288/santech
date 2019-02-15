@@ -1,0 +1,324 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+    {{> header/header}}
+
+    
+    
+    <div class="wrapper">
+        <div class="container">
+            
+            <div class="sidebar">
+                {{> sidebar/collapsible}}
+            </div>
+
+            <div class="content-cont">
+
+                <div class="content">
+                    <div class="m-title-1">
+                        Личный кабинет
+                    </div>
+
+                    <div class="tabs-container mt20">
+                        <div class="tabs mb20">
+                            <a href="tab1" class="tabs-button tab ">Личные данные</a>
+                            <a href="tab2" class="tabs-button tab">Мои заказы</a>
+                            <a href="tab3" class="tabs-button tab">Отложенные товары</a>
+                            <a href="tab4" class="tabs-button tab active">Бонусная карта</a>
+                        </div>
+
+                        <div class="tab1 cont-tab">
+                            <form action="#" class="account-form">
+                                <div class="form-container">
+                                    <div class="m-bold-2 mb10">
+                                        Общая информация
+                                    </div>
+                                    <div class="form-container__group">
+                                        <div class="m-field__container">
+                                            <input type="text" class="m-field-2 required" placeholder="Имя">
+                                        </div>
+                                        <div class="m-field__container">
+                                            <input type="text" class="m-field-2 required" name="phone" placeholder="Номер телефона">
+                                        </div>
+                                        <div class="m-field__container">
+                                            <input type="text" class="m-field-2 required" placeholder="Страна">
+                                        </div>
+                                        <div class="m-field__container">
+                                            <input type="text" class="m-field-2 required" placeholder="Фамилия">
+                                        </div>
+                                        <div class="m-field__container">
+                                            <input type="text" class="m-field-2 required" placeholder="E-mail">
+                                        </div>
+                                        <div class="m-field__container">
+                                            <input type="text" class="m-field-2 required" placeholder="Город">
+                                        </div>
+                                        <div class="m-field__container">
+                                            <input type="text" class="m-field-2 required" placeholder="Отчество">
+                                        </div>
+                                        <div class="m-field__container">
+                                            <input type="text" class="m-field-2 required" placeholder="Индекс">
+                                        </div>
+                                        <div class="m-field__container">
+                                            <input type="text" class="m-field-2 required" placeholder="Адрес">
+                                        </div>
+                                    </div>
+                                    <div class="m-bold-2 mb10 mt20">
+                                            Смена пароля
+                                    </div>
+                                    <div class="form-container__group">
+                                        <div class="m-field__container">
+                                            <input type="text" class="m-field-2 required" placeholder="Текущий пароль">
+                                        </div>
+                                        <div class="m-field__container">
+                                            <input type="text" class="m-field-2 required" placeholder="Новый пароль">
+                                        </div>
+                                        <div class="m-field__container">
+                                            <input type="text" class="m-field-2 required" placeholder="Повторите пароль">
+                                        </div>
+                                    </div>
+                                    <div class="form-account-bottom mt20">
+                                        <div class="form-account__file input-file">
+                                            
+                                            <div class="form-account__input">
+                                                {{Icon iconName="file"}}
+                                                <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple="">
+                                                <label for="file-1"><span>Приложить документ</span></label>
+                                            </div>
+                                            
+                                            <div class="docs__container">
+                                            </div>
+                                            
+                                        </div>
+                                        <button class="m-button">
+                                            отпарвить
+                                        </button>
+                                    </div>
+                                </div>
+
+        
+                            </form>
+                        </div>
+                        <div class="tab2 cont-tab">
+                            <div class="basket basket-account">
+                                <table>
+                                    <tr data-price="3500">
+                                        <th>Артикул</th>
+                                        <th>Описание</th>
+                                        <th>Адрес доставки</th>
+                                        <th>Дата</th>
+                                        <th>Цена</th>
+                                        <th>Статус</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="basket__article">
+                                                43798178
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="basket__desc">
+                                                <div class="basket__info">
+                                                    <div class="m-bold">
+                                                        Osgard Vink 37073
+                                                    </div>  
+                                                    <div class="m-text-2">
+                                                            Чешская компания LEMARK производит качественную сантехнику                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="basket__padding basket__addres m-bold">г Москва, ул Кирпичная, д 16</td>
+                                        <td class="basket__padding m-text">15.11.2018</td>
+                                        <td class="basket__padding ">
+                                            <div class="m-bold">
+                                                3500 руб.
+                                            </div>
+                                        </td>
+                                        <td class="">
+                                            <div class="basket__state delivered">
+                                                
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="basket__article">
+                                                43798178
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="basket__desc">
+                                                <div class="basket__info">
+                                                    <div class="m-bold">
+                                                        Osgard Vink 37073
+                                                    </div>  
+                                                    <div class="m-text-2">
+                                                            Чешская компания LEMARK производит качественную сантехнику                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="basket__padding basket__addres m-bold">г Москва, ул Кирпичная, д 16</td>
+                                        <td class="basket__padding m-text">15.11.2018</td>
+                                        <td class="basket__padding ">
+                                            <div class="m-bold">
+                                                3500 руб.
+                                            </div>
+                                        </td>
+                                        <td class="">
+                                            <div class="basket__state way">
+                                                
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="basket__article">
+                                                43798178
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="basket__desc">
+                                                <div class="basket__info">
+                                                    <div class="m-bold">
+                                                        Osgard Vink 37073
+                                                    </div>  
+                                                    <div class="m-text-2">
+                                                            Чешская компания LEMARK производит качественную сантехнику                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="basket__padding basket__addres m-bold">г Москва, ул Кирпичная, д 16</td>
+                                        <td class="basket__padding m-text">15.11.2018</td>
+                                        <td class="basket__padding ">
+                                            <div class="m-bold">
+                                                3500 руб.
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="basket__state nosent">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+        
+                            </div>
+                        </div>
+                        <div class="tab3 cont-tab">
+                            <div class="account__col">
+                                <div class="account-nolike">
+                                    <div class="m-title-3"> 
+                                        Отложенных товаров нет
+                                    </div>
+                                    <div class="m-text mt10">
+                                         вы можете перейти в каталог чтобы выбрать товары 
+                                         <a href="#" class="m-link-arrow mt15">
+                                             Перейти в каталог
+                                             {{Icon iconName="arrow" className="ml10"}}
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="prod__container">
+                                    {{> item/prod-delete}}
+                                    {{> item/prod-delete}}
+                                    {{> item/prod-delete}}
+                                    {{> item/prod-delete}}
+                                    {{> item/prod-delete}}
+                                    {{> item/prod-delete}}
+                                </div>
+                                <div class="pag__container">
+                                    {{> pag/pag}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab4 cont-tab active">
+                            <div class="bonus">
+
+                                <div class="sign__container mb30">
+                                    <div class="sign">
+                                        <div class="sign__left">
+                                            <div class="sign__t m-title-1">
+                                                    Бонусная карта
+                                            </div>
+                                            <div class="sign__imgs scene  bonus__img-form">
+                                                <img src="%=static=%img/content/ellips-blue-2.png" alt="">
+                                                <img src="%=static=%img/content/ellips-green.png" class="sign__imgs-pos " data-depth="-0.8" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="sign__right">
+                                            <form action="#" class="sign__form form-reg ">
+
+                                                <div class="sign__bottom-text mb10">
+                                                        Активировав бонусную карту вы будете получать скидку в <br> размере 3% на каждую последующую покупку.
+                                                </div>
+                                                <div class="sign__bottom-text">
+                                                        Для того, чтобы активировать бонусную карту введи свой номер<br> телефона
+                                                </div>
+
+                                                <div class="m-field__container mb15 mt25">
+                                                    <input name="phone" type="text" class="m-field" placeholder="Введите ваш телефон">
+                                                    {{Icon iconName="phone"}}
+                                                </div>
+                    
+                                                <button class="m-button mt20 sign__button">
+                                                    СОХРАНИТЬ
+                                                </button>
+                                                
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sign__container mb30">
+                                    <div class="sign">
+                                        <div class="sign__left">
+                                            <div class="sign__t m-title-1">
+                                                    Бонусная карта
+                                            </div>
+                                            <div class="sign__imgs scene bonus__img-card">
+                                                <img src="%=static=%img/content/ellipse-blue-1.png" alt="">
+                                                <img src="%=static=%img/content/ellips-green.png" class="sign__imgs-pos " data-depth="-0.8" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="sign__right">
+                                            <div class="sign__form form-reg">
+    
+                                                <div class="sign__bottom-text mb10">
+                                                    Вы получаете скидку от каждой покупки в размере 3%
+                                                    <br>
+                                                    <div class="m-bold"> № карты: 195134835</div>
+                                                </div>
+    
+                                                <button class="m-button mt20 sign__button">
+                                                    УДАЛИТЬ КАРТУ
+                                                </button>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    {{> footer/footer}}
+   
+    {{> popup/popup}}
+    {{> scripts/scripts}}
+    
+</body>
+</html>
