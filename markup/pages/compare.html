@@ -20,29 +20,351 @@
 
                 <div class="content">
                     {{> bread/bread}}     
-                    
-                    <div class="m-title-1 mt10">
-                            Сравнение
-                    </div>
 
-                    <div class="compare tabs__container mt30">
-                        <div class="tabs mb20">
-                            <a href="tab1" class="tabs-button tab">Личные данные</a>
-                            <a href="tab2" class="tabs-button tab">Мои заказы</a>
-                            <a href="tab3" class="tabs-button tab">Отложенные товары</a>
-                            <a href="tab4" class="tabs-button tab active">Бонусная карта</a>
+                    <div class="title-top">
+                        <div class="m-title-1 mt10">
+                            Сравнение
+                            <label class="m-check">
+                                <input type="checkbox" name="checker" checked>
+                                <div class="m-check__psevdo">
+                                    {{Icon iconName="checkOn"}}
+                            
+                                </div>
+                                <p class="m-check__text">Показать только отличия</p>
+                            </label>
                         </div>
 
-                        <div class="tab-cont tab1">
-                                
+                    </div>
+
+                    <div class="tabs-container mt20">
+                        <div class="tabs mb20">
+                            <a href="tab1" class="tabs-button tab active">Смесители</a>
+                            <a href="tab2" class="tabs-button tab">Ванны</a>
+                            <a href="tab3" class="tabs-button tab">Унитазы</a>
+                            <a href="tab4" class="tabs-button tab ">Унитазы</a>
+                            <a href="tab4" class="tabs-button tab ">Унитазы</a>
+                        </div>
+
+                        <div class="tab1 cont-tab active">
+                            <div class="m-table-tab">
+                                <div class="m-table">
+                                    <table>
+                                        <tr>
+                                            <td class="td-bold">Бренд</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Страна производитель</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Бренд</td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <th>Общие характеристики</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Тип</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Назначение</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Цвет</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Механизм</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Производитель картриджа</td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <th>Габариты</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Длина излива (см)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Назначение</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Высота излива (см)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-bold">Длина излива (см)</td>
+                                        </tr>
+                                    </table>
+                                    
+                                </div>
+                                <div class="table-slider__container">
+                                    <div class="table-slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="m-table">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="td-tool">
+                                                                        Lemark
+                                                                   <div class="td-delete">
+                                                                        <div class="td-delete__icon td-delete-button">
+                                                                            {{Icon iconName="del"}}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Чехия</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Lemark</td>
+                                                        </tr>
+                                                    </table>
+                                                    <table>
+                                                        <tr>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Одноручковый</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Для кухни</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Хром</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Рычажное</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>кран для питьевой воды, подключение фильтра </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table>
+                                                        <tr>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19.5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22.15</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19.5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>134</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="m-table">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="td-tool">
+                                                                        Lemark
+                                                                   <div class="td-delete">
+                                                                        <div class="td-delete__icon td-delete-button">
+                                                                            {{Icon iconName="del"}}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Чехия</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Lemark</td>
+                                                        </tr>
+                                                    </table>
+                                                    <table>
+                                                        <tr>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Одноручковый</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Для кухни</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Хром</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Рычажное</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>кран для питьевой воды, подключение фильтра </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table>
+                                                        <tr>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19.5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22.15</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19.5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>134</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="m-table">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="td-tool">
+                                                                        Lemark
+                                                                   <div class="td-delete">
+                                                                        <div class="td-delete__icon td-delete-button">
+                                                                            {{Icon iconName="del"}}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Чехия</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Lemark</td>
+                                                        </tr>
+                                                    </table>
+                                                    <table>
+                                                        <tr>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Одноручковый</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Для кухни</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Хром </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Рычажное</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>кран кран кран кран кран для питьевой воды, подключение фильтра </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table>
+                                                        <tr>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19.5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22.15</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19.5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>134</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="m-table">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="td-tool">
+                                                                        Lemark
+                                                                   <div class="td-delete">
+                                                                        <div class="td-delete__icon td-delete-button">
+                                                                            {{Icon iconName="del"}}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Чехия</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Lemark</td>
+                                                        </tr>
+                                                    </table>
+                                                    <table>
+                                                        <tr>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Одноручковый</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Для кухни</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Хром</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Рычажное</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>кран для питьевой воды, подключение фильтра </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table>
+                                                        <tr>
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19.5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22.15</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19.5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>134</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab2 cont-tab">
+                           
+                        </div>
+                        <div class="tab3 cont-tab">
+                           
+                        </div>
+
+                        <div class="tab4 cont-tab">
+                           
                         </div>
                         
                     </div>
                 </div>
             </div>
-
         </div>
-        
     </div>
 
     {{> footer/footer}}

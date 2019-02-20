@@ -76,6 +76,16 @@
         color: white;
     }
 }
+.m-title-3-b,h3 {
+    font-family: "prox";
+    line-height: normal;
+    font-size: 24px;
+    font-weight: 500;
+    color: #4A4A4A;
+    &-w {
+        color: white;
+    }
+}
 .m-title-4,h4 {
     font-family: "prox";
     line-height: normal;
@@ -263,6 +273,68 @@ a {
     }
 }
 
+.m-table-tab {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    .m-table{
+        overflow: visible;
+        width: 33.333333%;
+        table {
+            // width: 100%;
+            min-width: auto;
+        }
+    }
+}
+.table-slider {
+    max-width: 100%;
+    width: 100%;
+    opacity: 1;
+    .swiper-slide {
+        width: 50%;
+        .m-table {
+            width: 100%;
+        }
+        &.opacity {
+            transition: 0.3s;
+            opacity: 0;
+        }
+        &.margin {
+            transition: 0.3s;
+            margin-left: -342px;
+            z-index: -1;
+        }
+    }
+    &__container {
+        max-width: 66.6666666666666%;
+        width: 100%;
+        overflow: hidden;
+    }
+}
+.td-tool {
+    display: flex;
+    justify-content: space-between;
+}
+.td-delete{
+    height: 100%;
+    position: relative;
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        cursor: pointer;
+        svg {
+            fill: #C3CED7;
+            transition: 0.2s;
+        }
+        &:hover {
+            svg {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
 .m-table {
     max-width: 100%;
     overflow-x: auto;
@@ -280,12 +352,15 @@ a {
             background-color: #FDFDFD;
         }
         &:nth-child(1) {
-            background-color: #E5F0F9;
-            color: #2D9BF7;
+            th {
+                color: #2D9BF7;
+                background-color: #E5F0F9;
+            }
         }
     }
     td,th {
-        padding: 17px 45px;
+        padding: 16px 45px;
+        line-height: normal;
         font-size: 16px;
     }
     th {
@@ -303,6 +378,15 @@ a {
 
 .nice-select:focus {
     border-color: #D8E4EF !important;
+}
+
+.m-bg-cont {
+    background-size: cover;
+    background-repeat: no-repeat;
+    img {
+        display: none;
+        
+    }
 }
 
 .nice-select.search-select {
@@ -335,8 +419,8 @@ a {
 .m-button {
     background: $green;
     border-radius: 2px;
-    padding: 15px 40px;
-    display: flex;
+    padding: 15px 10px;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     color: white;   
@@ -349,7 +433,11 @@ a {
     width: 100%;
     text-align: center;
     vertical-align: middle;
+    max-width: 190px;
     cursor: pointer;
+    &.w190 {
+        max-width: 190px;
+    }
     svg {
         margin-right: 12px;
     }
@@ -665,10 +753,19 @@ input {
         }
     }
 }
+.m-flex {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
 
 .mr0 {
     margin-right: 0 !important; 
     display: block;
+}
+.mb0 {
+    margin-bottom: 0 !important;
 }
 
 .mt10 {
@@ -719,6 +816,10 @@ input {
     margin-bottom: 30px !important; 
     display: block;
 }
+.mb60 {
+    margin-bottom: 60px !important; 
+    display: block;
+}
 
 .ml10{
     margin-left: 10px !important;
@@ -734,6 +835,9 @@ input {
 
 .mr10{
     margin-right: 10px !important;
+}
+.mr15{
+    margin-right: 15px !important;
 }
 
 .mr20{
@@ -777,6 +881,12 @@ input {
         margin: 0;
         margin-bottom: 12px;
         margin-top: 7px;
+    }
+    .m-img{
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
     a {
         font-size: 16px;

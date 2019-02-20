@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+    {{> header/header}}
+
+    
+    
+    <div class="wrapper">
+        <div class="container">
+            
+            <div class="sidebar">
+                {{> sidebar/collapsible}}
+            </div>
+
+            <div class="content-cont">
+                <div class="content">
+                    {{> bread/bread}}
+                    <div class="m-title-1"> 
+                            Блог
+                    </div>
+                    <div class="article__container">
+                        {{> item/article}}
+                        {{> item/article}}
+                        {{> item/article}}
+                        {{> item/article}}
+                        {{> item/article}}
+                        {{> item/article}}
+                    </div>
+
+                    <div class="pag__container">
+                        {{> pag/pag}}
+                    </div>
+
+                    <div class="bonus">
+                        <div class="sign">
+                            <div class="sign__left">
+                                <div class="sign__t m-title-1">
+                                        Хотите быть в курсе 
+                                        новостей                                
+                                </div>
+                                <div class="sign__imgs scene pos">
+                                    <img src="%=static=%img/content/ellips-blue-2.png" alt="">
+                                    <img src="%=static=%img/content/ellips-green.png" class="sign__imgs-pos " data-depth="-0.8" alt="">
+                                </div>
+                            </div>
+                            <div class="sign__right">
+                                <form action="#" class="sign__form form-reg">
+        
+                                    <div class="m-text mb20">
+                                        Оставьте свою почту и получай свежие новости                                   
+                                    </div>
+                                    <div class="m-field__container mb15">
+                                        <input name="email" type="text" class="m-field" placeholder="Введите ваш E-mail" autocomplete="off">
+                                        {{Icon iconName="mail"}}
+                                    </div>
+                                    <button class="m-button mt20 sign__button">
+                                        Отправить
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    {{> footer/footer}}
+   
+    {{> popup/popup}}
+    {{> scripts/scripts}}
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+    {{> header/header}}
+
+    
+    
+    <div class="wrapper">
+        <div class="container">
+            
+            <div class="sidebar">
+                {{> sidebar/collapsible}}
+            </div>
+
+            <div class="content-cont">
+                <div class="content">
+                    {{> bread/bread}}
+                    <div class="m-title-1 mt10">
+                        Готовые решения
+                    </div>
+
+                    <div class="sol mt20">
+                        <div class="sol__item mb30">
+                            <a href="#" class="sol__img">
+                                <div class="sol__img-content m-bg-cont">
+                                    <img src="%=static=%img/content/sol-1.jpg" alt="">
+                                </div>
+                            </a>
+                            <div class="sol__desc">
+                                <div class="sol__t">
+                                    <a href="#" class="m-title-3-b">
+                                        Лавандовый рай
+                                    </a>
+                                    <div class="exis mt10 mb20"><!--  class noexis -->
+                                        {{Icon iconName="exis" className="exis-svg"}}
+                                        {{Icon iconName="noexis" className="noexis-svg"}}
+                                        В наличии
+                                    </div>
+                                </div>
+                                <div class="sol__caption mt15">
+                                    <div class="m-bold">
+                                            Срок доставки:
+                                    </div>
+                                    <div class="m-text">
+                                        от 3 до 5 дней
+                                    </div>
+                                </div>
+                                <div class="sol__text m-text-2 mt10 mb10">
+                                    Повседневная практика показывает, что консультация 
+                                    с широким активом требуют определения и уточнения направлений прогрессивного развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных
+                                </div>
+
+                                <div class="sol__price m-title-3-b mt25 mb20">
+                                    7 850 руб.
+                                </div>
+
+                                <a href="#" class="mt20 m-button ">
+                                    {{Icon iconName="basket"}}
+                                    В КОРЗИНУ
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pag__container">
+                        {{> pag/pag}}
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    {{> footer/footer}}
+   
+    {{> popup/popup}}
+    {{> scripts/scripts}}
+    
+</body>
+</html>

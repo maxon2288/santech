@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+    {{> header/header}}
+
+    
+    
+    <div class="wrapper">
+        <div class="container">
+            
+            <div class="sidebar">
+                {{> sidebar/collapsible}}
+            </div>
+
+            <div class="content-cont">
+
+                <div class="content">
+                    <div class="top-features">
+                        <a href="#" class="page-back">
+                            <div class="slider-button slider-button-prev">
+                                {{Icon iconName="arrow"}}
+                            </div>
+                            Назад
+                        </a>
+                        <div class="top-features__line">
+
+                        </div>
+                        {{> bread/bread}}
+                    </div>
+
+                    <div class="title-top">
+                        <div class="m-title-1">
+                            lorem
+                            <div class="date">
+                                21.07.2019
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="m-text">
+                            Планируете приобретать мебель в ванную?
+                            Узнайте все секреты от специалиста в этой области - Анастасии Зариповой! Как выбрать качественную вещь, ориентируясь на внешний вид и фурнитуру. Какие материалы лучше. На что важно обратить внимание
+                    </div>
+
+                    <div class="video">
+                        <div class="video__link-container lightgallery">
+                            <a  class="video__link" href="https://www.youtube.com/watch?v=8PPPKGrdgok">
+                            </a>    
+                        </div>
+
+                        <div class="video__img m-bg-cont">
+                            <img src="%=static=%img/content/master-2.jpg" alt="">
+                        </div>
+                        <div class="video__bg"></div>
+                        <div class="video__button">
+                            {{Icon iconName="button"}}
+                        </div>
+                    </div>
+
+                    <div class="common-text  mb60 mt30">
+                        <div class="html__container">
+                            <h2>Смесители</h2>
+                            <div class="html">
+                                <p>Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия.</p>
+                                <p>  Таким образом рамки и место обучения кадров позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Таким образом постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. </p>
+                                <p>С другой стороны новая модель организационной деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. </p>
+                                <p>Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Таким образом рамки и место обучения кадров позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+                                <p>Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Таким образом рамки и место обучения кадров позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+                                <p>Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Таким образом рамки и место обучения кадров позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+                                        
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="bonus">
+                        <div class="sign">
+                            <div class="sign__left">
+                                <div class="sign__t m-title-1">
+                                        Какой мастер-класс вы 
+                                        бы хотели увидеть?
+                                </div>
+                                <div class="sign__imgs scene pos">
+                                    <img src="%=static=%img/content/ellips-blue.png" alt="">
+                                    <img src="%=static=%img/content/ellips-green.png" class="sign__imgs-pos " data-depth="-0.8" alt="">
+                                </div>
+                            </div>
+                            <div class="sign__right">
+                                <form action="#" class="sign__form form-reg">
+        
+                                    <div class="m-text mb20">
+                                            Предложите тему мастер класса, заполнив форму ниже
+                                    </div>
+                                    <div class="m-field__container mb15">
+                                        <input name="phone" type="text" class="m-field" placeholder="Номер телефона" autocomplete="off">
+                                        {{Icon iconName="phone"}}
+                                    </div>
+                                    <div class="m-field__container mb15">
+                                        <input type="text" class="m-field-2 required" name="text" placeholder="Тема для мастер-класса">
+                                    </div>
+                                    
+                                    <button class="m-button mt20 sign__button">
+                                        Отправить
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    {{> footer/footer}}
+   
+    {{> popup/popup}}
+    {{> scripts/scripts}}
+    
+</body>
+</html>

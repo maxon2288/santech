@@ -39,6 +39,13 @@ $(document).ready(function () {
 		});
 	});
 
+	$("table th").each(function() {
+		if ($(this).text() == '') {
+			$(this).html('&nbsp;');
+		}
+	});
+
+
 	$(".m-field, .m-field-2").change(function() {
 		if ($(this).val().length > 0) {
 			$(this).addClass("is-focus");
@@ -51,6 +58,14 @@ $(document).ready(function () {
 	$("body").css({'visibility': "visible", "opacity": "1"});
 	popup ();
 	// forms();
+
+	
+	$(".td-delete-button").click(function() {
+		var it = $(this).closest(".swiper-slide");
+		$(this).closest(".swiper-slide").addClass("opacity");
+		$(this).closest(".swiper-slide").addClass("margin");
+		$(this).closest(".swiper-slide").addClass("display");	
+	});
 
 	var swiper = new Swiper('.m-slider', {
 		autoplay: {
@@ -69,6 +84,20 @@ $(document).ready(function () {
 		},
 		mousewheel: true,
 	});
+
+
+	if ($(".table-slider .swiper-slide").length > 2) {
+		var swiper = new Swiper('.table-slider', {
+			slidesPerView: 2,
+			grabCursor: true,
+			keyboard: {
+				enabled: true,
+			},
+		});
+	}
+	if ($(".table-slider .swiper-slide").length < 1) {
+		$(".table-slider .swiper-slide").closest(".swiper-container").remove();
+	}
 
 	$('.zoom-image').each(function(){
 		var originalImagePath = $(this).find('img').attr('data-orig');
@@ -246,10 +275,10 @@ $(document).ready(function () {
 		$(this).attr("title", title);
 	 });
 
-	//  $(".m-img-cont").each(function() {
-	// 	var image = $(this).find("img").attr('src');
-	// 	$(this).css("background-image", "url("+image+")")
-	//  });
+	 $(".m-bg-cont").each(function() {
+		var image = $(this).find("img").attr('src');
+		$(this).css("background-image", "url("+image+")")
+	 });
 
 	 $(".label").each(function() {
 		var discount = $(this).attr("data-discount");
@@ -295,6 +324,9 @@ $(document).ready(function () {
 	//NUMBER
 
 	//basket
+
+	$(".html__container table").wrap(`<div class="m-table"></div>`);
+	$(".html__container img").wrap(`<div class="m-img"></div>`);
 	
 	// $(".basket-i").click(function() {
 	// 	var it = $(this).closest("tr");
@@ -302,14 +334,6 @@ $(document).ready(function () {
 	// 	var price = it.attr("data-price");
 	// 	it.find(".basket-result span").text(+val * +price);
 	// });
-
-
-
-
-
-
-
-
 
 	$(".lightgallery").lightGallery(); 
 

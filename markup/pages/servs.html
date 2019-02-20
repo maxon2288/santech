@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+    {{> header/header}}
+
+    
+    
+    <div class="wrapper">
+        <div class="container">
+            
+            <div class="sidebar">
+                {{> sidebar/collapsible}}
+            </div>
+
+            <div class="content-cont">
+                <div class="content">
+                    {{> bread/bread}}
+
+                    <div class="m-title-1">
+                        Услуги
+                    </div>
+                    <div class="servs-top mt20 mb60">
+                        <div class="servs-top__left">
+                            <div class="m-text">
+                                Повседневная практика показывает, что консультация с широким активом требуют определения и уточнения направлений прогрессивного развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание позиций.
+                            </div>
+                        </div>
+                        <div class="servs-top__right scene">
+                            <img src="%=static=%img/content/ellips-green.png" class="servs-top-img" data-depth="-0.3" alt="">
+                            <img src="%=static=%img/content/serv-ellips.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="title-top">
+                        <div class="m-title-1">
+                            <span></span>
+                            <div class="m-flex">
+                                <div class="m-bold mr15">
+                                    Выберите услугу:
+                                </div>
+                                <select name="" id="" class="m-select-2 long-select">
+                                    <option value="">Установка</option>
+                                    <option value="">Установка</option>
+                                    <option value="">Установка</option>
+                                    <option value="">Установка</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prod__container mt20">
+                        {{> item/serv}}
+                        {{> item/serv}}
+                        {{> item/serv}}
+                        {{> item/serv}}
+                        {{> item/serv}}
+                        {{> item/serv}}
+                        {{> item/serv}}
+                        {{> item/serv}}
+                        {{> item/serv}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    {{> footer/footer}}
+   
+    {{> popup/popup}}
+    {{> scripts/scripts}}
+    
+</body>
+</html>
