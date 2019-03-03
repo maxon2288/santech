@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+    {{> header/header}}
+
+    
+    
+    <div class="wrapper">
+        <div class="container">
+            <div class="error">
+                <div class="error__left">
+                    <div class="error__main">404</div>
+                    <div class="error__title m-title-2">Извините, страница не найдена</div>
+                    <div class="error__desc m-text">Проверьте строку поиска или вернитесь на главную</div>
+                    <a href="#" class="m-button">
+                        На главную
+                    </a>
+                </div>
+                <div class="error-right scene">
+                    <img src="%=static=%img/content/jakuzi.png" data-depth="-0.2" alt="">
+                </div>
+            </div>          
+
+        </div>
+        
+    </div>
+
+    {{> footer/footer}}
+   
+    {{> popup/popup}}
+    {{> scripts/scripts}}
+    
+</body>
+</html>

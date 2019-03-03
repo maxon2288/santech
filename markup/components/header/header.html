@@ -3,61 +3,99 @@
         <div class="wrapper">
             <div class="header__container">
                 <div class="header__left">
+                    <div class="header__mobile-menu">
+                        <div class="header__mobile-top humb-open">
+                            {{Icon iconName="menu"}} Меню
+                        </div>
+                        
+                    </div>
                     <div class="header__menu">
     
-                        <a href="#" class="header__menu-item">
+                        <a href="filosofia.html" class="header__menu-item">
                             Наша философия
                         </a>
     
-                        <a href="#" class="header__menu-item">
+                        <a href="reviews.html" class="header__menu-item">
                             Отзывы
                         </a>
     
-                        <a href="#" class="header__menu-item">
+                        <a href="map.html" class="header__menu-item">
                             Наши магазины
                         </a>
         
                     </div>
                 </div>
-                <div class="header__right">
-                    <div class="header__city">
-                        <select class="m-select-1" name="" id="">
-                            <option value="1">Москва</option>
-                            <option value="1">Питер</option>
-                            <option value="1">Павлодар</option>
-                        </select>
-                    </div>
+                <div class="header__city">
+                    <select class="m-select-1" name="" id="">
+                        <option value="1">Москва</option>
+                        <option value="1">Питер</option>
+                        <option value="1">Павлодар</option>
+                    </select>
+                </div>
 
-                    <div class="social">
-                        <a href="#" class="social-item">
-                            {{Icon iconName="vk"}}
-                        </a>
-                        <a href="#" class="social-item">
-                            {{Icon iconName="f"}}
-                        </a>
-                        <a href="#" class="social-item">
-                            {{Icon iconName="inst"}}
-                        </a>
-                        <a href="#" class="social-item">
-                            {{Icon iconName="ok"}}
-                        </a>
-                    </div>
+                <div class="social">
+                    <a href="#" class="social-item">
+                        {{Icon iconName="vk"}}
+                    </a>
+                    <a href="#" class="social-item">
+                        {{Icon iconName="f"}}
+                    </a>
+                    <a href="#" class="social-item">
+                        {{Icon iconName="inst"}}
+                    </a>
+                    <a href="#" class="social-item">
+                        {{Icon iconName="ok"}}
+                    </a>
+                </div>
 
-                    <div class="header__acc">
-                        {{Icon iconName="user"}}
-                        <span>
-                                Личный кабинет
-                        </span>
-                        {{Icon iconName="left-arrow"}}
+                <div class="header__acc">
+                    {{Icon iconName="user"}}
+                    <span class="header__acc-span">
+                            Личный кабинет
+                    </span>
+                    {{Icon iconName="left-arrow"}}
+                    <div class="submenu">
+                        <a href="account.html" class="submenu__item">
+                            <div class="submenu__icon">
+                                {{Icon iconName="sign"}}
+                            </div>
+                            <span>Личные данные</span>
+                        </a>
+                        <a href="account.html" class="submenu__item">
+                            <div class="submenu__icon">
+                                {{Icon iconName="orders"}}
+                            </div>
+                            <span>Мои заказы</span>
+                        </a>
+                        <a href="account.html" class="submenu__item">
+                            <div class="submenu__icon">
+                                {{Icon iconName="likes"}}
+                            </div>
+                            <span>Избранное</span>
+                        </a>
+                        <a href="account.html" class="submenu__item">
+                            <div class="submenu__icon">
+                                {{Icon iconName="bonus"}}
+                            </div>
+                            <span>Бонусы</span>
+                        </a>
+                        <form action="#">
+                            <button class="submenu__item">
+                                <div class="submenu__icon">
+                                    {{Icon iconName="exit"}}
+                                </div>
+                                <span>Выйти</span>
+                            </button>
+
+                        </form>
                     </div>
-                    
                 </div>
             </div>
         </div>
     </div>
     <div class="header__bottom">
         <div class="wrapper">
-            <div class="header__container">
+            <div class="header__container ">
                 <a href="index.html" class="header__logo">
                     <img src="%=static=%img/content/logo.png" alt="">
                     <div class="header__logo-text m-text">
@@ -68,19 +106,20 @@
                 </a>
 
                 <div class="header__bottom-menu">
-                    <a href="#" class="header__bottom-menu-item active">
+                    <a href="solutions.html" class="header__bottom-menu-item active">
                         Готовые решения
                     </a>
-                    <a href="#" class="header__bottom-menu-item">
+                    <a href="servs.html" class="header__bottom-menu-item">
                             Услуги
                     </a>
-                    <a href="#" class="header__bottom-menu-item">
+                    <a href="action.html" class="header__bottom-menu-item">
                             Акции
                     </a>
-                    <a href="#" class="header__bottom-menu-item">
+                    <a href="faq.html" class="header__bottom-menu-item">
                             Частые вопросы
                     </a>
                 </div>
+
                 <a href="tel:89227078757" class="header__phone">
                     <div class="header__phone-img">
                         <img src="%=static=%img/content/phone.png" alt="">
@@ -92,42 +131,159 @@
                         <span>Заказать звонок</span>
                     </div>
                 </a>
-                
             </div>
         </div>
     </div>
 
     <div class="header__features">
-        <div class="wrapper">
-            <div class="header__container">
+        <div class="wrapper header__bottom-container">
+            <div class="header__container ">
+
                 <div class="header__catalog">
                     {{Icon iconName="catalog"}}
                     Каталог товаров
                 </div>
+
                 <form class="header__search m-search">
                     <select class="search-select after" name="" id="">
                         <option value="">Товар</option>
                         <option value="">Услуги</option>
                     </select>
-                    <input type="text" class="header__search-field" name="search" placeholder="Что вы ищете?">
+                    <div class="header__search-container">
+                        <input type="text" class="header__search-field" name="search" placeholder="Что вы ищете?" autocomplete="off">
+                        <div class="header__search-result">
+                            
+                            <div class="header__search-items">
+                                <div class="header__search-item">
+                                    <div class="m-text">
+                                        Извините по вашему запросу <br>
+                                            ничего не найдено
+                                    </div>
+                                </div>
+                                <div class="header__search-item">
+                                    <div class="header__search-img m-bg-cont">
+                                        <img src="%=static=%img/content/sol-1.jpg" alt="">
+                                    </div>
+                                    <div class="header__search-desc">
+                                        <div class="header__search-title">
+                                                Osgard Vink 37073
+                                        </div>
+                                        <div class="header__search-text">
+                                                Чешская компания LEMARK производит высококачественную сантехнику. 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__search-item">
+                                    <div class="header__search-img m-bg-cont">
+                                        <img src="%=static=%img/content/sol-1.jpg" alt="">
+                                    </div>
+                                    <div class="header__search-desc">
+                                        <div class="header__search-title">
+                                                Osgard Vink 37073
+                                        </div>
+                                        <div class="header__search-text">
+                                                Чешская компания LEMARK производит высококачественную сантехнику. 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__search-item">
+                                    <div class="header__search-img m-bg-cont">
+                                        <img src="%=static=%img/content/sol-1.jpg" alt="">
+                                    </div>
+                                    <div class="header__search-desc">
+                                        <div class="header__search-title">
+                                                Osgard Vink 37073
+                                        </div>
+                                        <div class="header__search-text">
+                                                Чешская компания LEMARK производит высококачественную сантехнику. 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__search-item">
+                                    <div class="header__search-img m-bg-cont">
+                                        <img src="%=static=%img/content/sol-1.jpg" alt="">
+                                    </div>
+                                    <div class="header__search-desc">
+                                        <div class="header__search-title">
+                                                Osgard Vink 37073
+                                        </div>
+                                        <div class="header__search-text">
+                                                Чешская компания LEMARK производит высококачественную сантехнику. 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__search-item">
+                                    <div class="header__search-img m-bg-cont">
+                                        <img src="%=static=%img/content/sol-1.jpg" alt="">
+                                    </div>
+                                    <div class="header__search-desc">
+                                        <div class="header__search-title">
+                                                Osgard Vink 37073
+                                        </div>
+                                        <div class="header__search-text">
+                                                Чешская компания LEMARK производит высококачественную сантехнику. 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__search-item">
+                                    <div class="header__search-img m-bg-cont">
+                                        <img src="%=static=%img/content/sol-1.jpg" alt="">
+                                    </div>
+                                    <div class="header__search-desc">
+                                        <div class="header__search-title">
+                                                Osgard Vink 37073
+                                        </div>
+                                        <div class="header__search-text">
+                                                Чешская компания LEMARK производит высококачественную сантехнику. 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__search-item">
+                                    <div class="header__search-img m-bg-cont">
+                                        <img src="%=static=%img/content/sol-1.jpg" alt="">
+                                    </div>
+                                    <div class="header__search-desc">
+                                        <div class="header__search-title">
+                                                Osgard Vink 37073
+                                        </div>
+                                        <div class="header__search-text">
+                                                Чешская компания LEMARK производит высококачественную сантехнику. 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="header__search-item-button">
+                                <a href="#" class="m-slider__a mt15 m-link-arrow" data-swiper-parallax="-400" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                                        перейти к результатам
+                                    {{Icon iconName="arrow"}}
+                                </a>                            
+                            </div>
+                            
+                        </div>
+                    </div>
                     <button class="header__search-button">
                         {{Icon iconName="search"}}
                         найти
                     </button>
                 </form>
+
                 <div class="header__count">
-                    <div class="header__like header__count-item">
+                    <a href="account.html" class="header__like header__count-item">
                         {{Icon iconName="like"}}
                         <div class="like-count">0</div>
-                    </div>
-                    <div class="header__comp header__count-item">
+                    </a>
+                    <a href="compare.html" class="header__comp header__count-item">
                         {{Icon iconName="comprison"}}
-                    </div>
+                        <div class="comp-count">0</div>
+                    </a>
                 </div>
-                <a href="#" class="header__basket">
+                
+                <a href="basket.html" class="header__basket">
                     {{Icon iconName="basket"}}
-                    0 руб.
+                    <span class="header-basket-result">0</span> руб.
                 </a>
+
             </div>
         </div>
     </div>

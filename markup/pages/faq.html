@@ -1,0 +1,129 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+    {{> header/header}}
+
+    
+    
+    <div class="wrapper">
+        <div class="container">
+            
+            <div class="sidebar">
+                {{> sidebar/collapsible}}
+            </div>
+
+            <div class="content-cont">
+                <div class="content">
+                    {{> bread/bread}}
+                    <div class="m-title-1 mt10">
+                        Часто задаваемые вопросы 
+                    </div>
+                    <ul class="faq collapsible">
+                        <li class="faq__item active">
+                            <div class="collapsible-header faq__header active">
+                                <span>Почему разные сроки доставки?</span>
+                                <div class="faq__button">
+                                    {{Icon iconName="arrow"}}
+                                </div>
+                            </div>
+                            <div class="faq__body collapsible-body active">
+                                <div class="faq__content html__container">
+                                    <p>Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Таким образом рамки и место обучения кадров позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Таким образом постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. </p>
+                                    <p>С другой стороны новая модель организационной деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.</p>
+
+                                    
+                                    <div class="faq__buttons">
+                                        <div class="m-bold">Для Вас ответ оказался полезным?</div>
+    
+                                        <div class="faq__buttons-container">
+                                            <div class="m-button callPopup" data-popupBlock="faq-popup">
+                                                ДА
+                                            </div>
+                                            <div class="m-button-r callPopup" data-popupBlock="faq-popup">
+                                                НЕТ
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq__item active">
+                            <div class="collapsible-header faq__header active">
+                                <span>Почему разные сроки доставки?</span>
+                                <div class="faq__button">
+                                    {{Icon iconName="arrow"}}
+                                </div>
+                            </div>
+                            <div class="faq__body collapsible-body active">
+                                <div class="faq__content html__container">
+                                    <p>Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Таким образом рамки и место обучения кадров позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Таким образом постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. </p>
+                                    <p>С другой стороны новая модель организационной деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.</p>
+
+                                    
+                                    <div class="faq__buttons">
+                                        <div class="m-bold">Для Вас ответ оказался полезным?</div>
+    
+                                        <div class="faq__buttons-container">
+                                            <div class="m-button callPopup" data-popupBlock="faq-popup">
+                                                ДА
+                                            </div>
+                                            <div class="m-button-r callPopup" data-popupBlock="faq-popup">
+                                                НЕТ
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="bonus">
+                        <div class="sign">
+                            <div class="sign__left">
+                                <div class="sign__t m-title-1">
+                                    Хотите стать частью 
+                                    нашей команды?                               
+                                </div>
+                                <div class="sign__imgs scene pos">
+                                    <img src="%=static=%img/content/ellips-blue-2.png" alt="">
+                                    <img src="%=static=%img/content/ellips-green.png" class="sign__imgs-pos " data-depth="-0.8" alt="">
+                                </div>
+                            </div>
+                            <div class="sign__right">
+                                <form action="#" class="sign__form form-reg">
+        
+                                    <div class="m-text mb20">
+                                        Заполните форму ниже и мы перезвоним вам в течении 10 минут                                    </div>
+                                    <div class="m-field__container mb15">
+                                        <input name="phone" type="text" class="m-field" placeholder="Введите ваш телефон" autocomplete="off">
+                                        {{Icon iconName="phone"}}
+                                    </div>
+                                    <button class="m-button mt20 sign__button">
+                                        Отправить
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    {{> footer/footer}}
+   
+    {{> popup/popup}}
+    {{> scripts/scripts}}
+    
+</body>
+</html>

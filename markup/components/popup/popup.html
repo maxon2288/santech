@@ -1,13 +1,169 @@
-<div class="overlay "></div>
+<div class="overlay"></div>
 
-<div class="popup popup-delete-user ">
-    <div class="popup__container">
-        <div class="popup-content">
-            <div class="popup__close popupClose">
-                <!-- close buttton -->
-            </div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis commodi odit, accusantium ad quasi, unde doloribus vitae nam ea, nobis excepturi autem reiciendis velit tempora optio aspernatur? Atque, perferendis distinctio.
+<div class="popup serv-popup">
+    <div class="popup__close popupClose">
+        {{Icon iconName="close"}}
+    </div>
+    <div class="popup__top">
+        <div class="popup__title m-title-2">Заказать услугу</div>        
+        <div class="m-text">
+            Мы перезвоним вам в течении 10 минут
+        </div>
+    </div>
+    <form action="#" class="popup__content">
+        <div class="m-field__container mb15">
+            <input name="name" type="text" class="m-field" placeholder="Введите ваше имя">
+            {{Icon iconName="user"}}
+        </div>
+        <div class="m-field__container mb15">
+            <input name="phone" type="text" class="m-field" placeholder="Введите ваш телефон">
+            {{Icon iconName="phone"}}
+        </div>  
+
+        <button class="m-button mt20 sign__button">
+            ОТПРАВИТЬ
+        </button>
+    </form>
+</div>
+
+<div class="popup-thanx-button callPopup" data-popupBlock="thanx-popup"></div>
+    
+<div class="popup thanx-popup">
+    <div class="popup__close popupClose">
+        {{Icon iconName="close"}}
+    </div>
+    <div class="popup__top">
+        <div class="popup__title m-title-2">
+            Спасибо!
+        </div>        
+        <div class="m-text">
+            Товар добавлен в корзину
+        </div>
+    </div>
+    <div class="popup__content">
+
+        <div class="m-button sign__button popupClose">
+            хорошо
         </div>
     </div>
 </div>
- 
+
+
+<div class="popup faq-popup">
+    <div class="popup__close popupClose">
+        {{Icon iconName="close"}}
+    </div>
+    <div class="popup__top">
+        <div class="popup__title m-title-2">
+            Спасибо!
+        </div>        
+        <div class="m-text">
+            Нам очень важно ваше мнение.
+        </div>
+    </div>
+</div>
+
+
+
+<div class="header__mobile-sub header-humb">
+    <a href="filosofia.html">Наша философия</a>
+    <a href="#">Отзывы</a>
+    <a href="#">Наши магазины</a>
+    <a href="#">Готовые решения</a>
+    <a href="#">Услуги</a>
+    <a href="#">Акции</a>
+    <a href="#">Частые вопросы</a>
+    <a href="#">Избранное</a>
+    <a href="#">Сравнения</a>
+    <a href="#">Корзина</a>
+</div>
+
+<div class="popup popup-basket">
+    <div class="popup__close popupClose">
+        {{Icon iconName="close"}}
+    </div>
+    <div class="popup__top">
+        <div class="popup__title m-title-2">
+            Товар добавлен в корзину
+        </div>        
+    </div>
+    <div class="popup__content">
+
+        <div class="m-button sign__button popupClose">
+            хорошо
+        </div>
+    </div>
+</div>
+
+<div class="popup popup-serv-basket">
+    <div class="popup__close popupClose">
+        {{Icon iconName="close"}}
+    </div>
+    <div class="popup__top">
+        <div class="popup__title m-title-2">
+            Услуга добавлена в корзину
+        </div>        
+    </div>
+    <div class="popup__content">
+
+        <div class="m-button sign__button popupClose">
+            хорошо
+        </div>
+    </div>
+</div>
+
+<div class="popup popup-comp">
+    <div class="popup__close popupClose">
+        {{Icon iconName="close"}}
+    </div>
+    <div class="popup__top">
+        <div class="popup__title m-title-2">
+            Товар добавлен к сравнению
+        </div>        
+    </div>
+    <div class="popup__content">
+
+        <div class="m-button sign__button popupClose">
+            хорошо
+        </div>
+    </div>
+</div>
+
+<div class="popup popup-comp-delete">
+    <div class="popup__close popupClose">
+        {{Icon iconName="close"}}
+    </div>
+    <div class="popup__top">
+        <div class="popup__title m-title-2">
+            Товар удален из сравнений
+        </div>        
+    </div>
+    <div class="popup__content">
+
+        <div class="m-button sign__button popupClose">
+            хорошо
+        </div>
+    </div>
+</div>
+
+<div class="popup delete-popup">
+    <div class="popup__close popupClose">
+        {{Icon iconName="close"}}
+    </div>
+    <div class="popup__top">
+        <div class="popup__title m-title-2">Вы действительно <br>
+            хотите удалить?</div>        
+    </div>
+    <div class="popup__content">
+        <form action="#" class="popup__delete-buttons">
+            <button class="m-button sign__button popupClose">
+                да
+            </button>
+            <div class="m-button-r ml30 sign__button popupClose">
+                нет
+            </div>
+            
+        </form>
+    </div>
+</div>
+    

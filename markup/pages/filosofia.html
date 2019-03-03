@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+    {{> header/header}}
+
+    
+    
+    <div class="wrapper">
+        <div class="container">
+            
+            <div class="sidebar">
+                {{> sidebar/collapsible}}
+            </div>
+
+            <div class="content-cont">
+                <div class="content">
+                    {{> bread/bread}}
+
+                    <div class="m-title-1 mt10">
+                        Наша философия
+                    </div>
+
+                    <div class="fil">
+                        <div class="fil__left">
+                            <div class="html__container">
+                                <p>Мы - команда профессионалов со знанием и богатым опытом подбора сантехники и света для создания комфортного и уютного пространства.</p>
+                                <h5>
+                                    Наша миссия
+                                </h5>
+                                <p>
+                                    Мы продаем качественную и недорогую сантехнику и свет для тех людей, кто ценит свое время, деньги и силы. Мы обеспечиваем своим покупателям наивысший уровень сервиса, стремясь делать их счастливее и помогая создавать комфорт и уют в доме.
+
+                                </p>
+                                <p>
+                                    Мы продаем качественную и недорогую сантехнику и свет для тех людей, кто ценит свое время, деньги и силы. Мы обеспечиваем своим покупателям наивысший уровень сервиса, стремясь делать их счастливее и помогая создавать комфорт и уют в доме.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="fil__right">
+                            <div class="fil__item">
+                                <div class="fil__img">
+                                    {{Icon iconName="big-basket"}}
+                                </div>
+                                <div class="fil__text">
+                                    Комфортный выбор
+                                    товара
+                                </div>
+                            </div>
+                            <div class="fil__item">
+                                <div class="fil__img">
+                                    {{Icon iconName="fon"}}
+                                </div>
+                                <div class="fil__text">
+                                    Совет при покупке и
+                                    установке товара
+                                </div>
+                            </div>
+                            <div class="fil__item">
+                                <div class="fil__img">
+                                    {{Icon iconName="star"}}
+                                </div>
+                                <div class="fil__text">
+                                    Обеспечим наивысший
+                                    уровень сервиса                                
+                                </div>
+                            </div>
+                            <div class="fil__item">
+                                <div class="fil__img">
+                                    {{Icon iconName="ruki"}}
+                                </div>
+                                <div class="fil__text">
+                                    Программу лояльности
+                                    клиентов                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="bonus">
+                        <div class="sign">
+                            <div class="sign__left">
+                                <div class="sign__t m-title-1">
+                                    Хотите стать частью 
+                                    нашей команды?                               
+                                </div>
+                                <div class="sign__imgs scene pos">
+                                    <img src="%=static=%img/content/ellips-blue-2.png" alt="">
+                                    <img src="%=static=%img/content/ellips-green.png" class="sign__imgs-pos " data-depth="-0.8" alt="">
+                                </div>
+                            </div>
+                            <div class="sign__right">
+                                <form action="#" class="sign__form form-reg">
+        
+                                    <div class="m-text mb20">
+                                        Заполните форму ниже и мы перезвоним вам в течении 10 минут                                    </div>
+                                    <div class="m-field__container mb15">
+                                        <input name="phone" type="text" class="m-field" placeholder="Введите ваш телефон" autocomplete="off">
+                                        {{Icon iconName="phone"}}
+                                    </div>
+                                    <button class="m-button mt20 sign__button">
+                                        Отправить
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    {{> footer/footer}}
+   
+    {{> popup/popup}}
+    {{> scripts/scripts}}
+    
+</body>
+</html>

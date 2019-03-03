@@ -3,7 +3,7 @@
 <head>
     {{> head/head head.defaults}}
 </head>
-<body class="page" style="visibility: hidden;opacity: 0;">
+<body class="page print-page" style="visibility: hidden;opacity: 0;">
     %=symbols=%
     {{> header/header}}
 
@@ -32,8 +32,9 @@
                         {{> bread/bread}}
                     </div>
 
+
                     <div class="product">
-                        <div class="product__left">
+                        <div class="product__left product__left-slider">
                             <div class="swiper-container product-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide m-img-cont">
@@ -85,7 +86,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="product__right">
+                        <div class="product__right  basket-container">
                             <div class="m-title-2">
                                 Смеситель для кухни Lemark 
                                 Comfort к фильтру питьевой воды
@@ -101,12 +102,12 @@
                                 <p>Чехия</p>
                             </div>
                             <div class="product__desc">
-                                <b>Страна:</b>
+                                <b>Описание:</b>
                                 <p>Чешская компания LEMARK производит высококачественную сантехнику. Популярность её на российском рынке обусловлена тем, что при вполне европейском качестве, цены на продукцию Lemark более демократичны и привлекательны.</p>
                             </div>
 
                             <div class="product__price">
-                                <div class="product__price-t count-res" data-price="7850">
+                                <div class="product__price-t count-res basket-price" data-price="7850">
                                         <span>7850</span> руб.
                                 </div>
                                 <div class="product__count">
@@ -127,17 +128,17 @@
                             </div>
 
                             <div class="product__features">
-                                <div class="m-button add-basket mr20">
+                                <div class="m-button add-basket mr20 basket-button callPopup" data-popupBlock="popup-basket">
                                     {{Icon iconName="basket"}}
                                     В корзину
                                 </div>
-                                <div class="m-button-r mr10">
+                                <div class="m-button-r mr10 comp-trigger callPopup" data-popupBlock="popup-comp" >
                                     {{Icon iconName="comprison"}}
                                 </div>
-                                <div class="m-button-r mr10">
+                                <div class="m-button-r mr10 like-button">
                                     {{Icon iconName="like"}}
                                 </div>
-                                <div class="m-button-r">
+                                <div class="m-button-r m-print">
                                     {{Icon iconName="print"}}
                                 </div>
                             </div>
@@ -223,7 +224,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="reduction__content cont-tab tab3">
+                            <div class="reduction__content cont-tab tab3 conditions">
                                 <div class="warr">
                                     <div class="html__container">
                                         <h5>
