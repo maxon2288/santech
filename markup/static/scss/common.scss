@@ -75,14 +75,24 @@ body {
 
 .fil {
     display: flex;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
     &__left {
         width: calc(50% - 30px);
         margin-right: 30px; 
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
     }
     &__right {
         width: 50%;
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
     }
     &__item {
         width: calc(50% - 2px);
@@ -90,6 +100,10 @@ body {
         padding: 45px 30px 35px 30px;
         margin-bottom: 2px;
         margin-right: 2px;
+        @media screen and (max-width: 320px) {
+            width: 100%;
+            padding: 20px;
+        }
     }
     &__text {
         font-weight: 500;
@@ -127,15 +141,30 @@ body {
         font-weight: bold;
         line-height: 200px;
         margin-bottom: 25px;
+        @media screen and (max-width: 767px) {
+            font-size: 130px;
+            line-height: 90px;
+        }
     }
     &__left {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @media screen and (max-width: 1024px) {
+            width: 100%;
+            padding: 20px;
+            align-items: center;
+            text-align: center;
+        }
     }
     &__desc {
         font-size: 16px;
         margin-top: 10px;
+    }
+    &-right {
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
     }
     .m-button {
         margin-top: 40px;
@@ -152,26 +181,38 @@ body {
         border-radius: 2px;
         overflow: hidden;
         margin-bottom: 30px;
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
     }
     &__left {
-        min-height: 225px;
         max-width: 480px;
+        min-height: 225px;
         width: 100%;
         display: flex;
+        justify-content: space-around;
+        align-items: stretch;
         font-size: 16px;
+        @media screen and (max-width: 767px) {
+            max-width: 100%;
+        }
     }
     &__container {
         width: 100%;
-        height: 100%;
+        min-height: 225px;
     }
     .map {
         width: 100%;
         height: 100%;
+        min-height: 225px;
     }
     &__right {
         padding: 30px;
         max-width: 545px;
         width: 100%;
+        @media screen and (max-width: 767px) {
+            max-width: 100%;
+        }
     }
     td {
         font-size: 16px;
@@ -185,6 +226,7 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    flex-wrap: wrap;
     &__button {
         display: flex;
         align-items: center;
@@ -703,7 +745,8 @@ body {
     border: 1px solid #E5F0F9;
     box-sizing: border-box;
     border-radius: 100px;
-    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -769,10 +812,9 @@ img {
     }
     @media screen and (max-width: 425px) {
         width: 100%;
-        margin-right: 0 !important;
+        margin-right: 0 ;
     }
     &.swiper-slide {
-        margin: 0;
         width: 100%;
     }
     &__top {
@@ -1006,7 +1048,7 @@ img {
     width: 100%;
     .sign{
         max-width: 100%;
-        
+        margin: 0;
         &__container {
             width: 100%;
         }
@@ -1145,7 +1187,7 @@ img {
     font-weight: 400;
 }
 .master {
-    width: calc(33% - 17px);
+    width: calc(33% - 18px);
     margin-right: 30px;
     display: flex;
     flex-direction: column;
@@ -1155,6 +1197,11 @@ img {
     &:nth-child(3n + 3) {
         margin-right: 0;
     }
+    @media screen and (max-width: 767px) {
+        width: calc(100% - 10px);
+        margin-right: 0px;
+    }
+    
     &__top {
         height: 245px;
         width: 100%;
@@ -1214,7 +1261,7 @@ img {
     }
     &__container {
         display: flex;
-        
+        flex-wrap: wrap;
     }
 }
 .sign {
@@ -1623,7 +1670,7 @@ position: relative;
         max-height: 410px;
         margin-right: 45px;
         display: flex;
-        flex-direction: colum;
+        flex-direction: column;
         &.product__left-slider {
             max-height: 1000px;
         }
@@ -2042,6 +2089,9 @@ position: relative;
     &-rating {
         display: flex;
         margin-bottom: 20px;
+        label {
+            height: 100%;
+        }
     }
     &__label {
         font-weight: 500;
@@ -2438,8 +2488,12 @@ position: relative;
     border-radius: 2px;
     margin-right: 30px;
     margin-bottom: 30px;
-    width: calc(33% - 17px);
+    width: calc(33% - 18px);
     border: 1px solid #E9F3FB;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        margin-right: 0;
+    }
     &__container {
         display: flex;
         flex-wrap: wrap;
@@ -2669,6 +2723,10 @@ position: relative;
         padding: 12px 0;
         margin-top: 15px;
         border-top: 1px solid #DBE4EB;
+        flex-wrap: wrap;        
+        .m-bold {
+            margin-bottom: 10px;
+        }
     }
     &__buttons-container {
         display: flex;
