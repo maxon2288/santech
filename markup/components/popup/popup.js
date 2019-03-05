@@ -1,11 +1,19 @@
 function popup() {
     $('.popupClose, .overlay').on('click', function (event) {
         $('body').css('overflow', 'auto');
-        $('.popup, .overlay, .popup__container, .nav-container, .header-humb').removeClass('visible');
+        $('.popup, .overlay, .header__search, .popup__container, .nav-container, .header-humb, .collapsible__container').removeClass('visible');
     });
     
     $(".humb-open").click(function () {
         $(".header-humb, .overlay").addClass("visible");
+    });
+
+    $(".header__catalog").click(function() {
+        $(".collapsible__container, .overlay").addClass("visible");
+        
+    });
+    $(".search-open").click(function() {
+        $(".header__search").addClass("visible");
     });
 
     // $(".popup__container >").click(function() {

@@ -26,6 +26,32 @@
     </form>
 </div>
 
+<div class="popup phone-popup ">
+    <div class="popup__close popupClose">
+        {{Icon iconName="close"}}
+    </div>
+    <div class="popup__top">
+        <div class="popup__title m-title-2">Заказать звонок</div>        
+        <div class="m-text">
+            Мы перезвоним вам в течении 10 минут
+        </div>
+    </div>
+    <form action="#" class="popup__content">
+        <div class="m-field__container mb15">
+            <input name="name" type="text" class="m-field" placeholder="Введите ваше имя">
+            {{Icon iconName="user"}}
+        </div>
+        <div class="m-field__container mb15">
+            <input name="phone" type="text" class="m-field" placeholder="Введите ваш телефон">
+            {{Icon iconName="phone"}}
+        </div>  
+
+        <button class="m-button mt20 sign__button">
+            ОТПРАВИТЬ
+        </button>
+    </form>
+</div>
+
 <div class="popup-thanx-button callPopup" data-popupBlock="thanx-popup"></div>
     
 <div class="popup thanx-popup">
@@ -79,7 +105,7 @@
     <div class="popup__top">
         <div class="popup__title m-title-2">
             Ваша бонусная карта активирована
-        </div>        
+        </div>
     </div>
     <div class="popup__content">
 
@@ -116,7 +142,6 @@
     <a href="#">Частые вопросы</a>
     <a href="#">Избранное</a>
     <a href="#">Сравнения</a>
-    <a href="#">Корзина</a>
 </div>
 
 <div class="popup popup-basket">

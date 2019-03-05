@@ -29,7 +29,7 @@
                     <select class="m-select-1" name="" id="">
                         <option value="1">Москва</option>
                         <option value="1">Питер</option>
-                        <option value="1">Павлодар</option>
+                        <option value="1">Москва</option>
                     </select>
                 </div>
 
@@ -120,7 +120,7 @@
                     </a>
                 </div>
 
-                <a href="tel:89227078757" class="header__phone">
+                <a href="#" data-popupBlock="phone-popup" class="callPopup header__phone">
                     <div class="header__phone-img">
                         <img src="%=static=%img/content/phone.png" alt="">
                     </div>
@@ -144,7 +144,16 @@
                     Каталог товаров
                 </div>
 
-                <form class="header__search m-search">
+                <div class="search-open">
+                    {{Icon iconName="search"}}
+                </div>
+                
+
+                <form class="header__search m-search visible">
+                    <div class="popup__close popupClose">
+                        {{Icon iconName="close"}}
+                    </div>
+                    
                     <select class="search-select after" name="" id="">
                         <option value="">Товар</option>
                         <option value="">Услуги</option>

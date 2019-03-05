@@ -22,6 +22,10 @@ $(document).ready(function () {
 	
 	$("body").css({'visibility': "visible", "opacity": "1"});
 	popup ();
+
+	new WOW().init();
+	
+	
 	// forms();
 	if ($(window).width() <= 1024) {
 		var a = $('.collapsible__container').remove();
@@ -321,7 +325,7 @@ $(document).ready(function () {
             step = parseInt($input.attr('step'));
 		let temp = val + step;
 		$input.val(temp <= max ? temp : max);
-		$(".input-val").text($input.val());
+		it.find(".input-val").text($input.val());
 	});
 	
     $(document).on('click', '.input-de', function(e) {
@@ -333,11 +337,38 @@ $(document).ready(function () {
 			step = parseInt($input.attr('step'));
 		let temp = val - step;
 		$input.val(temp >= min ? temp : min);
-		$(".input-val").text($input.val());
+		it.find(".input-val").text($input.val());
 	});
+	//basket
+
+	$(document).on("click", ".basket-price-de", function(e) {
+		var it = $(this).closest("tr")
+		let input = it.find(".basket-price-input");
+		var val = input.val();
+		console.log(val);
+		var price = it.attr("data-price");
+		if (+it.find(".basket-price-result span").text() <= price) {
+			it.find(".basket-price-result span").text(+it.find(".basket-price-result span").text() - 0)
+		} else {
+			it.find(".basket-price-result span").text(+it.find(".basket-price-result span").text() - +price)
+		}
+	});
+	$(document).on("click", ".basket-price-i", function(e) {
+		var it = $(this).closest("tr")
+		let $input = it.find(".basket-price-input");
+		var val = $input.val();
+		console.log(val);
+		var price = it.attr("data-price");
+		it.find(".basket-price-result span").text(+it.find(".basket-price-result span").text() + +price)
+	});
+	
+	// var basketLength =  $('.basket-price-tr').length;
+	// for (i=0; i <= basketLength; i++) {
+	// 	var cur = +$(".basket-price-tr").find(".basket-price-result span").text();
+	// 	console.log(cur);
+	// }
 	//NUMBER
 
-	//basket
 
 	$(".html__container table").wrap(`<div class="m-table"></div>`);
 	$(".html__container img").wrap(`<div class="m-img"></div>`);

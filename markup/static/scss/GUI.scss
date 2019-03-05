@@ -561,6 +561,7 @@ a {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    max-height: 50px;
     svg {
         position: absolute;
         fill: $blue;
@@ -599,6 +600,7 @@ a {
     position: relative;
     z-index: 1;
     border-radius: 0;
+    max-height: 50px;
     @media screen and (max-width: 600px) {
     }
     &.error {
@@ -681,6 +683,7 @@ a {
     color: #909EA9;
     transform: translateY(-50%);
     z-index: 3;
+    white-space: nowrap;
 }
 
 input {
@@ -843,7 +846,9 @@ input {
 .ml10{
     margin-left: 10px !important;
 }
-
+.mr5 {
+    margin-right: 5px !important;
+}
 .ml20{
     margin-left: 20px !important;
 }

@@ -15,6 +15,7 @@ body {
     flex-direction: column;
     transition-delay: 0.05s;
     line-height: normal;
+    overflow-x: hidden;
 }
 *{
     margin: 0;
@@ -100,6 +101,15 @@ body {
         padding: 45px 30px 35px 30px;
         margin-bottom: 2px;
         margin-right: 2px;
+        &:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        &:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        &:nth-child(4) {
+            animation-delay: 0.6s;
+        }
         @media screen and (max-width: 320px) {
             width: 100%;
             padding: 20px;
@@ -128,9 +138,20 @@ body {
 }
 
 
+.collapsible-open  {
+    width: 30px;
+    height: 30px;
+    @media screen and (min-width: 1025px) {
+        display: none;
+    }
+    svg {
+        width: 30px;
+        height: 30px;
+        fill: $blue;
+    }
+}
 
-
-.error {
+.error-main {
     display: flex;
     width: 100%;
     padding: 100px 0;
@@ -173,7 +194,7 @@ body {
 .maps {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;   
+    margin-top: 20px;
     &__item {
         border: 1px solid #E5F0F8;
         display: flex;
@@ -219,6 +240,11 @@ body {
         padding-right: 40px !important;
         vertical-align: top;
         padding: 7px 0;
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
@@ -411,12 +437,44 @@ body {
 }
 .collapsible__container {
     width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    transform: translatex(-100%);
+    &.visible {
+        transform: translatex(0);
+        visibility: visible;
+        opacity: 1;
+
+    }
+    @media screen and (max-width: 768px) {
+        max-width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        max-height: 100vh;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 10000;
+        background-color: rgb(255, 255, 255);
+    }
 }
 .collapsible-body {
     border: none;
     padding: 0; 
 }
-
+.search-open {
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    height: 100%;
+    background-color: $green;
+    height: 53px;
+    width: 53px;
+    @media screen and (min-width: 1020px) {
+        display: none;
+    }
+}
 .banner {
     width: 100%;
     height: 320px;
@@ -844,6 +902,9 @@ img {
         line-height: normal;
         font-size: 20px;
         color: #4A4A4A;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     &__desc {
         line-height: normal;
@@ -1001,6 +1062,9 @@ img {
     }
     &__t{
         margin-top: 20px;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     &__pr {
         line-height: normal;
@@ -1081,7 +1145,7 @@ img {
     }
     .m-field__container{
         max-width: 300px;
-
+        
     }
 }
 
@@ -1253,6 +1317,11 @@ img {
         background-color: #070707;
         opacity: 0.4;   
         transition: 0.3s;
+    }
+    &__title {
+        &:hover {
+            text-decoration: underline;
+        }
     }
     &__button {
         position: relative; 
@@ -2512,7 +2581,9 @@ position: relative;
         display: flex;
         &:hover {
             color: $blue;
+            text-decoration: underline;
         }
+
     }
     &__top {
         height: 245px;

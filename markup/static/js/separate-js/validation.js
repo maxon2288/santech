@@ -42,6 +42,59 @@ $(document).ready(function() {
 			},  
 		});
 	});
+	$('.account-form').each(function() {
+        var it = $(this);
+         it.validate({
+			rules: {
+				name: {
+					required: false,
+				},
+				country: {
+					required: false,
+				},
+				surName: {
+					required: false,
+				},
+				email: {
+					required: false,
+					email: true,
+				},
+				city: {
+					required: false,
+				},
+				father: {
+					required: false,
+				},
+				adress: {
+					required: false,
+				},
+				index: {
+					required: false,
+					digits: true,
+				},
+				phone: {
+					required: false,
+					minlength: 17,
+				},
+				password: {
+					required: false,
+					minlength: 5,
+				},
+				passwordAgain: {
+					required: false,
+					equalTo: "#password-again",
+				},
+				passwordOld: {
+					required: false,
+
+				},
+			},
+
+			errorPlacement: function (error, element) {
+			},
+
+		});
+	});
 
 	$('.m-form').each(function() {
         var it = $(this);
