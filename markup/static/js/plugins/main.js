@@ -1,7 +1,6 @@
 
 $(document).ready(function () {
 
-	$('input[name="phone"]').mask("+ 7 000 000 00 00");
 
 	
 	$("table th").each(function() {
@@ -24,9 +23,9 @@ $(document).ready(function () {
 	popup ();
 
 	new WOW().init();
+
 	
 	
-	// forms();
 	if ($(window).width() <= 1024) {
 		var a = $('.collapsible__container').remove();
 		a.appendTo('.header');
@@ -57,6 +56,12 @@ $(document).ready(function () {
 			clickable: true,
 		},
 		mousewheel: true,
+	});
+	var swiper = new Swiper('.quality-slider', {
+		slidesPerView: 6,
+		parallax: true,
+		speed: 1600,
+		loop: true,
 	});
 
 

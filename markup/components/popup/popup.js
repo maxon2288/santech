@@ -8,13 +8,16 @@ function popup() {
         $(".header-humb, .overlay").addClass("visible");
     });
 
-    $(".header__catalog").click(function() {
-        $(".collapsible__container, .overlay").addClass("visible");
-        
-    });
-    $(".search-open").click(function() {
-        $(".header__search").addClass("visible");
-    });
+    if ($(window).width() <= 768) {
+        $(".header__catalog").click(function() {
+            $(".collapsible__container, .overlay").addClass("visible");
+            
+        });
+        $(".search-open").click(function() {
+            $(".header__search").addClass("visible");
+        });
+    }
+
 
     // $(".popup__container >").click(function() {
     //     $('.popup').removeClass("visible");

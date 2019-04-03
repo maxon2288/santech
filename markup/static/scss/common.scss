@@ -357,18 +357,22 @@ body {
         }
     }
 }
+
 .content-cont  {
     flex-grow: 1;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
+
 }
+
 .content {
     align-self: stretch;
     padding: 50px 45px;
     padding-right: 0;
     max-height: 100%;
     height: 100%;
+    max-width: 100%;
     @media screen and (max-width: 1330px) {
         padding-right: 45px;
     }
@@ -437,17 +441,12 @@ body {
 }
 .collapsible__container {
     width: 100%;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s;
-    transform: translatex(-100%);
-    &.visible {
-        transform: translatex(0);
-        visibility: visible;
-        opacity: 1;
-
-    }
+    
     @media screen and (max-width: 768px) {
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+        transform: translatex(-100%);
         max-width: 250px;
         position: fixed;
         top: 0;
@@ -457,6 +456,12 @@ body {
         overflow-y: auto;
         z-index: 10000;
         background-color: rgb(255, 255, 255);
+        &.visible {
+            transform: translatex(0);
+            visibility: visible;
+            opacity: 1;
+    
+        }
     }
 }
 .collapsible-body {
@@ -873,7 +878,6 @@ img {
         margin-right: 0 ;
     }
     &.swiper-slide {
-        width: 100%;
     }
     &__top {
         height: 245px;
@@ -1725,6 +1729,9 @@ position: relative;
     .m-bg-cont {
         background-position: center center;
     }
+    .html {
+
+    }
     &__img-cont {
         width: 100%;
         display: flex;
@@ -1834,6 +1841,13 @@ position: relative;
         color: #4a4a4a; 
         font-size: 16px;
         display: inline;
+    }
+    .html {
+        margin-top: 10px;
+        p {
+            display: block;
+            margin-bottom: 10px;
+        }
     }
     &__desc {
         display: flex;

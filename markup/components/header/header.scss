@@ -317,7 +317,11 @@
         @media screen and (max-width: 425px) {
             flex-direction: column;
         }
-        
+        .popupClose {
+            @media screen and (min-width: 769px) {
+                display: none;
+            }
+        }
         @media screen and (max-width: 1020px) {
             order: -1;
         }
