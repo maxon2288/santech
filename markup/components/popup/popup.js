@@ -47,7 +47,7 @@ function popup() {
     $(".dataserv").click(function() {
         var href= $(this).attr("data-serv");
         var popup = $(this).attr("data-popupBlock");
-        $("."+popup).find("form").attr("action", href);
+        $("."+popup).find(".serv-hidden").val(href);
     });
 
     // if ($(".popup").hasClass('visible')) {

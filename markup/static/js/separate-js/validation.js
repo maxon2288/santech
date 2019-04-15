@@ -2,15 +2,8 @@ $(document).ready(function() {
     // $(".header__search-field").keydown(function() {
 	// });
     $(".header__search-field").keyup(function() {
-		$.ajax({
-			success: function(){
-				$(".header__search-result").toggleClass("visible");
-				
-            }
-        });
+		$(".header__search-result").toggleClass("visible");
 	});
-
-
 
     //VALIDATION---------------------------
 	$('.form-reg').each(function() {
@@ -37,9 +30,20 @@ $(document).ready(function() {
 			errorPlacement: function (error, element) {
 			},
 
-			submitHandler: function() {
-				
-			},  
+		});
+	});
+	$('.reviews__form').each(function() {
+        var it = $(this);
+         it.validate({
+			rules: {
+				required: true,
+			},
+
+			errorPlacement: function (error, element) {
+			},
+
+			
+			// .reviews-popup
 		});
 	});
 	$('.account-form').each(function() {

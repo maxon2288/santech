@@ -1,14 +1,13 @@
 
 $(document).ready(function () {
 
-
+	$('.phone-mask').mask("+ 7 000 000 00 00");
 	
 	$("table th").each(function() {
 		if ($(this).text() == '') {
 			$(this).html('&nbsp;');
 		}
 	});
-
 
 	$(".m-field, .m-field-2").change(function() {
 		if ($(this).val().length > 0) {
@@ -17,14 +16,18 @@ $(document).ready(function () {
 			$(this).removeClass("is-focus");
 		}
 	});	
-	//VALIDATION---------------------------
+	$(".m-field, .m-field-2").each(function() {
+		if ($(this).val().length > 0) {
+			$(this).addClass("is-focus");
+		} else {
+			$(this).removeClass("is-focus");
+		}
+	});	
 	
 	$("body").css({'visibility': "visible", "opacity": "1"});
 	popup ();
 
 	new WOW().init();
-
-	
 	
 	if ($(window).width() <= 1024) {
 		var a = $('.collapsible__container').remove();
@@ -151,11 +154,20 @@ $(document).ready(function () {
 	} else {
 		$(".account-nolike").removeClass("visible")
 	}
-	
-	
-
 	//tabs------------
 	$(".tabs").each(function() {
+		$('.tab').click(function(e) {
+			e.preventDefault();
+			var it = $(this);
+			var href = it.attr("href");
+			it.closest(".tabs-container").find(".tab").removeClass("active");
+			it.addClass("active");
+			$(".cont-tab").removeClass("active");
+			it.closest(".tabs-container").find("." + href).addClass('active');
+		});
+	});
+
+	$(".tabs-form").each(function() {
 		$('.tab').click(function(e) {
 			e.preventDefault();
 			var it = $(this);
@@ -219,7 +231,6 @@ $(document).ready(function () {
 			$(".radio-first").find("input").prop("checked", true);				
 		}
 	});
-
 
 	$(".m-field__container").click(function() {
 		$(this).find("input").focus();
@@ -290,8 +301,6 @@ $(document).ready(function () {
 	$(document).ready(function() {
 		$('select').niceSelect();
 	});
-
-	
 	 
 	 $(".tooltip").each(function() {
 		var title = $(this).text();
@@ -308,8 +317,11 @@ $(document).ready(function () {
 		$(this).find(".dcount__val").text(" " +discount + "%");
 	 });
 
-
-	 // NUMBER INPUT
+	$(".call-serv-button").click(function() {
+		var serv = $(this).attr("data-serv");
+		var popup = $(this).attr("data-popupBlock");
+		$("." + popup).find(".serv-hidden").val(serv);
+	});	
 	 
 	 $(".input-cont").each(function() {
 		var it = $(this);
@@ -344,7 +356,6 @@ $(document).ready(function () {
 		$input.val(temp >= min ? temp : min);
 		it.find(".input-val").text($input.val());
 	});
-	//basket
 
 	$(document).on("click", ".basket-price-de", function(e) {
 		var it = $(this).closest("tr")
@@ -365,6 +376,30 @@ $(document).ready(function () {
 		console.log(val);
 		var price = it.attr("data-price");
 		it.find(".basket-price-result span").text(+it.find(".basket-price-result span").text() + +price)
+	});
+	
+	$(document).on("click", ".product-price-de", function(e) {
+		var it = $(this).closest(".product__price")
+		let input = it.find(".basket-price-input");
+		var val = input.val();
+		console.log(val);	
+		var price = it.attr("data-price");
+		if (+it.find(".basket-price-result span").text() <= price) {
+			it.find(".product-disc-result span").text(+it.find(".basket-price-result span").text() - 0)
+		} else {
+			it.find(".basket-price-result span").text(+it.find(".basket-price-result span").text() - +price)
+			it.find(".product-disc-result span").text(+it.find(".basket-price-result span").text() - +price)
+		}
+	});
+	$(document).on("click", ".product-price-i", function(e) {
+		var it = $(this).closest(".product__price")
+		let $input = it.find(".basket-price-input");
+		var val = $input.val();
+		console.log(val);
+		var price = it.attr("data-price");
+		var priceDisc = it.find('.product-disc-result').attr("data-price-dc");
+		it.find(".basket-price-result span").text(+it.find(".basket-price-result span").text() + +price)
+		it.find(".product-disc-result span").text(+it.find(".basket-price-result span").text() + +priceDisc)
 	});
 	
 	// var basketLength =  $('.basket-price-tr').length;
@@ -518,13 +553,15 @@ $(document).ready(function () {
 	// 	// }
 	// });
 
+
 	if ($('#slider').length > 0) {
 		var slider = document.getElementById('slider');
-		var rangeMin = $("#slider").data("min")
-		var rangeMax = $("#slider").data("max")
+		var rangeMin = +$(".input-min").val()
+		var rangeMax = +$(".input-max").val()
 		var rangeStep = $("#slider").data("step")
 		$(".output-left").text(parseFloat(rangeMin).toFixed(0));
 		$(".output-right").text(parseFloat(rangeMax).toFixed(0));
+		// $(".input-min").text(parseFloat(rangeMin).toFixed(0));
 		noUiSlider.create(slider, {
 			start: [rangeMin, rangeMax],
 			connect: true,
@@ -541,10 +578,12 @@ $(document).ready(function () {
 		$(".noUi-handle-lower").mousemove(function() {
 			var val = $(this).find("span").text();
 			$(".output-left").text(parseFloat(val).toFixed(0));
+			$(".input-min").val(parseFloat(val).toFixed(0));
 		});
 		$(".noUi-handle-upper").mousemove(function() {
 			var val = $(this).find("span").text();
 			$(".output-right").text(parseFloat(val).toFixed(0));
+			$(".input-max").val(parseFloat(val).toFixed(0));
 		});
 	}
 	
