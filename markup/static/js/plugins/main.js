@@ -231,6 +231,17 @@ $(document).ready(function () {
 			$(".radio-first").find("input").prop("checked", true);				
 		}
 	});
+	$(".face-cont-1").click(function() {
+		var it = $(this);
+		if (it.find(".face-1:checked").val() == "yur") {
+			$(".face-form").removeClass("visible");
+			$(".face-yr").addClass("visible");					
+		} 
+		if (it.find(".face-1:checked").val() == "fiz") {
+			$(".face-form").removeClass("visible");
+			$(".face-fiz").addClass("visible");											
+		}
+	});
 
 	$(".m-field__container").click(function() {
 		$(this).find("input").focus();
@@ -556,14 +567,18 @@ $(document).ready(function () {
 
 	if ($('#slider').length > 0) {
 		var slider = document.getElementById('slider');
-		var rangeMin = +$(".input-min").val()
-		var rangeMax = +$(".input-max").val()
+		var rangeMin = +$("#slider").attr("data-min")
+		var rangeMax = +$("#slider").attr("data-max")
+
+		var valMin = +$(".input-min").val();
+		var valMax = +$(".input-max").val();
+		
 		var rangeStep = $("#slider").data("step")
-		$(".output-left").text(parseFloat(rangeMin).toFixed(0));
-		$(".output-right").text(parseFloat(rangeMax).toFixed(0));
+		$(".output-left").text(parseFloat(valMin).toFixed(0));
+		$(".output-right").text(parseFloat(valMax).toFixed(0));
 		// $(".input-min").text(parseFloat(rangeMin).toFixed(0));
 		noUiSlider.create(slider, {
-			start: [rangeMin, rangeMax],
+			start: [valMin, valMax],
 			connect: true,
 			step: rangeStep,
 			range: {

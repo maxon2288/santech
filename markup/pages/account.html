@@ -32,71 +32,169 @@
                         </div>
 
                         <div class="tab1 cont-tab active">
-                            <form action="#" class="account-form">
+                            
+                            <form action="#" class="account-form tabs-container">
+                                
                                 <div class="form-container">
-                                    <div class="m-bold-2 mb10">
-                                        Общая информация
-                                    </div>  
-                                    <div class="form-container__group">
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" name="name" value="231321" placeholder="Имя">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" name="phone" placeholder="Номер телефона">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" name="country" placeholder="Страна">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" name="surName" placeholder="Фамилия">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" name="email" placeholder="E-mail">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" name="city" placeholder="Город">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" name="father" placeholder="Отчество">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" name="index" placeholder="Индекс">
-                                        </div>
-                                        <div class="m-field__container">
-                                            <input type="text" class="m-field-2 required" name="adress" placeholder="Адрес">
+                                    <div class="checkout__choice">
+                                        <div class="tabs">
+                                            <label class="form-radio face-cont-1">
+                                                <input type="radio" class="face-1" name="check1" checked value="fiz">
+                                                <div class=" tabs-button">Физ.лицо</div>
+                                            </label>
+                                            <label class="form-radio tab-input-cont face-cont-1">
+                                                <input type="radio" class="face-1" name="check1" value="yur">
+                                                <div class=" tabs-button">Юр. лицо</div>
+                                            </label>
                                         </div>
                                     </div>
-                                    <div class="m-bold-2 mb10 mt20">
-                                            Смена пароля
+
+                                    <div class="face-form face-fiz visible">
+                                        <div class="m-bold-2 mb10">
+                                            Общая информация
+                                        </div>  
+                                        <div class="form-container__group">
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="name" value="231321" placeholder="Имя">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="phone" placeholder="Номер телефона">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="country" placeholder="Страна">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="surName" placeholder="Фамилия">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="email" placeholder="E-mail">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="city" placeholder="Город">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="father" placeholder="Отчество">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="index" placeholder="Индекс">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="adress" placeholder="Адрес">
+                                            </div>
+                                        </div>
+                                        <div class="m-bold-2 mb10 mt20">
+                                                Смена пароля
+                                        </div>
+                                        <div class="form-container__group">
+                                            <div class="m-field__container">
+                                                <input type="password" class="m-field-2 required" name="passwordOld" placeholder="Текущий пароль">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="password" class="m-field-2 required" name="password" id="password-again" placeholder="Новый пароль">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="password" class="m-field-2 required" name="passwordAgain" placeholder="Повторите пароль">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-container__group">
-                                        <div class="m-field__container">
-                                            <input type="password" class="m-field-2 required" name="passwordOld" placeholder="Текущий пароль">
+
+                                    <div class="face-form face-yr"> 
+                                        <div class="m-bold-2 mb10">
+                                            Общая информация
                                         </div>
-                                        <div class="m-field__container">
-                                            <input type="password" class="m-field-2 required" name="password" id="password-again" placeholder="Новый пароль">
+                                        <div class="form-container__group">
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="company" value="231321" placeholder="Название компании">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="iin" placeholder="ИНН">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="kpp" placeholder="КПП">
+                                            </div>
                                         </div>
-                                        <div class="m-field__container">
-                                            <input type="password" class="m-field-2 required" name="passwordAgain" placeholder="Повторите пароль">
+                                        <div class="m-bold-2 mb10 mt20">
+                                                Контактное лицо
                                         </div>
-                                    </div>
-                                    <div class="form-account-bottom mt20">
-                                        <div class="form-account__file input-file">
-                                            
-                                            <div class="form-account__input">
-                                                {{Icon iconName="file"}}
-                                                <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple="">
-                                                <label for="file-1"><span>Приложить документ</span></label>
+                                        <div class="form-container__group">
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="name" value="231321" placeholder="Имя">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="surmane" placeholder="Фамилия">
                                             </div>
                                             
-                                            <div class="docs__container">
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="father" placeholder="Отчество">
+                                            </div>
+
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="function" placeholder="Должность">
+                                            </div>
+                                        </div>
+                                        <div class="m-bold-2 mb10 mt20">
+                                                Данные для входа
+                                        </div>
+                                        <div class="form-container__group">
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="email" value="231321" placeholder="E-mail">
+                                            </div>
+                                            <div class="m-field__container">
+                                                <input type="password" class="m-field-2 required" name="password" placeholder="Пароль">
+                                            </div>
+                                        </div>
+                                        <div class="m-bold-2 mb10 mt20">
+                                                Контактные данные
+                                        </div>
+                                        <div class="form-container__group">
+                                            <div class="m-field__container">
+                                                <input type="text" class="m-field-2 required" name="email" value="231321" placeholder="Номер телефона   ">
                                             </div>
                                             
+                                            <div class="m-field__container">
+                                                <input type="password" class="m-field-2 required" name="password" placeholder="Страна">
+                                            </div>
+
+                                            <div class="m-field__container">
+                                                <input type="password" class="m-field-2 required" name="password" placeholder="Город">
+                                            </div>
+
+                                            <div class="m-field__container">
+                                                <input type="password" class="m-field-2 required" name="password" placeholder="Страна">
+                                            </div>
+
+                                            <div class="m-field__container">
+                                                <input type="password" class="m-field-2 required" name="password" placeholder="Адрес">
+                                            </div>
+
+                                            <div class="m-field__container">
+                                                <input type="password" class="m-field-2 required" name="password" placeholder="Почтовый индекс">
+                                            </div>
+
                                         </div>
-                                        <button class="m-button">
-                                            отпарвить
-                                        </button>
+
+                                        
+                                        <div class="form-account-bottom mt20">
+                                            <div class="form-account__file input-file">
+                                                
+                                                <div class="form-account__input">
+                                                    {{Icon iconName="file"}}
+                                                    <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple="">
+                                                    <label for="file-1"><span>Приложить документ</span></label>
+                                                </div>
+                                                
+                                                <div class="docs__container">
+                                                </div>
+                                                
+                                            </div>
+                                            <button class="m-button">
+                                                отпарвить
+                                            </button>
+                                        </div>
+                                        
                                     </div>
+
+
                                 </div>
 
         
@@ -236,7 +334,7 @@
                             </div>
                         </div>
 
-                        <div class="tab4 cont-tab active">
+                        <div class="tab4 cont-tab">
                             <div class="bonus">
 
                                 <div class="sign__container mb30">

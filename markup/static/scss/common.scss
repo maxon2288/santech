@@ -1970,6 +1970,14 @@ position: relative;
     }
 }
 
+.face-form {
+    display: none;
+    flex-direction: column;
+    &.visible {
+        display: flex;
+    }
+}
+
 .exis {
     color: $green;
     font-size: 16px;
