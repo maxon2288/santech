@@ -304,7 +304,14 @@ $(document).ready(function () {
 		}
 	});
 
-	
+	$(".basket-price-tr").each(function() {
+		var text = +$(".basket__bottom-result span").text();
+		var it = $(this);
+		var res = +it.find(".basket-price-result span").text();
+		console.log(text);
+		console.log(res);
+		$(".basket__bottom-result span").text(text + res);
+	});
 	
 	$('.collapsible').collapsible();
 	// $('input[type="range"]').rangeslider();
@@ -369,28 +376,33 @@ $(document).ready(function () {
 	});
 
 	$(document).on("click", ".basket-price-de", function(e) {
-		var it = $(this).closest("tr")
+		var it = $(this).closest("tr");
 		let input = it.find(".basket-price-input");
 		var val = input.val();
 		console.log(val);
 		var price = it.attr("data-price");
+		var text = +$(".basket__bottom-result span").text();
 		if (+it.find(".basket-price-result span").text() <= price) {
 			it.find(".basket-price-result span").text(+it.find(".basket-price-result span").text() - 0)
+			$(".basket__bottom-result span").text(text - 0);
 		} else {
 			it.find(".basket-price-result span").text(+it.find(".basket-price-result span").text() - +price)
+			$(".basket__bottom-result span").text(text - price);
 		}
 	});
 	$(document).on("click", ".basket-price-i", function(e) {
-		var it = $(this).closest("tr")
+		var it = $(this).closest("tr");
 		let $input = it.find(".basket-price-input");
 		var val = $input.val();
 		console.log(val);
-		var price = it.attr("data-price");
+		var price = +it.attr("data-price");
+		var text = +$(".basket__bottom-result span").text();
 		it.find(".basket-price-result span").text(+it.find(".basket-price-result span").text() + +price)
+		$(".basket__bottom-result span").text(text + price)
 	});
 	
 	$(document).on("click", ".product-price-de", function(e) {
-		var it = $(this).closest(".product__price")
+		var it = $(this).closest(".product__price");
 		let input = it.find(".basket-price-input");
 		var val = input.val();
 		console.log(val);	
@@ -403,7 +415,7 @@ $(document).ready(function () {
 		}
 	});
 	$(document).on("click", ".product-price-i", function(e) {
-		var it = $(this).closest(".product__price")
+		var it = $(this).closest(".product__price");
 		let $input = it.find(".basket-price-input");
 		var val = $input.val();
 		console.log(val);
@@ -601,7 +613,46 @@ $(document).ready(function () {
 			$(".input-max").val(parseFloat(val).toFixed(0));
 		});
 	}
-	
 
-	 
+	'use strict';
+
+	;( function( $, window, document, undefined )
+	{
+		$( '.inputfile' ).each( function()
+		{
+			var $input	 = $( this ),
+				$label	 = $input.next( 'label' ),
+				labelVal = $label.html();
+
+			$input.on( 'change', function( e )
+			{
+				var fileName = '';
+
+				if( this.files && this.files.length > 1 )
+					fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+				else if( e.target.value )
+					fileName = e.target.value.split( '\\' ).pop();
+
+					$label.closest('.form-account__file').find('.docs__container').append(`
+					<div class="docs__item">
+						<div class="docs__delete">
+							<svg class="icon__delete" width="13px" height="13px">
+								<use xlink:href="#delete"></use>
+							</svg>
+						</div>
+						<span>`+fileName+`</span>
+					</div>
+					`);
+					console.log('fsad');
+				// $label.find( 'span' ).html(  );
+			});
+
+			// Firefox bug fix
+			$input
+			.on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+			.on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+		});
+	})( jQuery, window, document );
+
+		
 })
