@@ -329,6 +329,10 @@ $(document).ready(function () {
 		var image = $(this).find("img").attr('src');
 		$(this).css("background-image", "url("+image+")")
 	 });
+	 $(".m-img-cont").each(function() {
+		var image = $(this).find("img").attr('src');
+		$(this).css("background-image", "url("+image+")")
+	 });
 
 	 $(".label").each(function() {
 		var discount = $(this).attr("data-discount");

@@ -881,7 +881,10 @@ img {
         width: 100%;
         margin-right: 0 ;
     }
-    &.swiper-slide {
+    &__img-cont {
+        height: 245px;
+        width: 100%;
+        background-color: #E9F3FB;
     }
     &__top {
         height: 245px;
@@ -974,6 +977,16 @@ img {
     }
 }
 
+.m-img-cont {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    img {
+        display: none;
+    }
+}
+
+
 .prod {
     display: flex;
     flex-direction: column;
@@ -1052,6 +1065,7 @@ img {
         justify-content: flex-end;
         background-color: #e5f0f9;
         overflow: hidden;
+        
     }
     &__img {
         position: absolute;
@@ -2316,28 +2330,19 @@ position: relative;
         overflow-x: auto;
     }
     &__state{
-        &:before {
-            font-size: 16px;
-            font-weight: 500;
-            white-space: nowrap;
-        }
+        font-size: 16px;
+        font-weight: 500;
+        white-space: nowrap;
         &.delivered {
-            &:before {
-                content: "Доставлено";
-                color: $green;
-            }
+            color: $green;
         }
         &.way {
-            &:before {
-                content: "В пути";
-                color: $blue;
-            }
+            color: $blue;
+            content: "В пути";
         }
         &.nosent {
-            &:before {
-                content: "Не доставлено";
-                color: $orange;
-            }
+            content: "Не доставлено";
+            color: $orange;
         }
     }
     &__addres {
