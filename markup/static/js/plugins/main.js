@@ -320,10 +320,10 @@ $(document).ready(function () {
 		$('select').niceSelect();
 	});
 	 
-	 $(".tooltip").each(function() {
+	$(".tooltip").each(function() {
 		var title = $(this).text();
 		$(this).attr("title", title);
-	 });
+	});
 
 	 $(".m-bg-cont").each(function() {
 		var image = $(this).find("img").attr('src');
