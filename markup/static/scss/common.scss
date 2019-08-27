@@ -617,6 +617,7 @@ body {
         background-color: #F6FBFF;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         &.blue {
             background-color: #2D9BF7;
         }
@@ -624,7 +625,21 @@ body {
             flex-grow: 0;
             margin-right: auto;
         }
-        
+        background-size: contain;
+        position: relative;
+        img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            max-width: 200px;
+            max-height: 200px;
+            z-index: 1;
+            transform: translate(50%, 50%);
+        }
+        &-content {
+            position: relative;
+            z-index: 2;
+        }
     }
 }
 
@@ -790,7 +805,10 @@ body {
     }
     &__buttons {
         display: flex;
-
+        margin-top: auto;
+    }
+    .swiper-slider {
+        height: auto !important;
     }
 }
 .servs {
@@ -1090,6 +1108,7 @@ img {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        flex-grow: 1;
     }
     &__buttons {
         display: flex;
@@ -1765,8 +1784,15 @@ position: relative;
     .m-bg-cont {
         background-position: center center;
     }
-    .html {
+    &__left {
+        position: relative;
+        .label {
+            right: 10px;
+            top: 10px;
+            margin: 0;
+            position: absolute;
 
+        }
     }
     &__img-cont {
         width: 100%;
@@ -2329,8 +2355,9 @@ position: relative;
         }
     }
     .m-img-cont {
-        background-size: cover !important;
+        background-size: contain !important;
         background-position: center center;
+        background-repeat: no-repeat;
     }
     &__table-container {
         max-width: 100%;

@@ -9,14 +9,21 @@ $(document).ready(function () {
 		}
 	});
 
-	$(".m-field, .m-field-2").change(function() {
+	$(".m-field-2, .m-field ").change(function() {
 		if ($(this).val().length > 0) {
 			$(this).addClass("is-focus");
 		} else {
 			$(this).removeClass("is-focus");
 		}
 	});	
-	$(".m-field, .m-field-2").each(function() {
+	$(" .m-field-2 , .m-field").each(function() {
+		if ($(this).val().length > 0) {
+			$(this).addClass("is-focus");
+		} else {
+			$(this).removeClass("is-focus");
+		}
+	});	
+	$(" .m-field-2 , .m-field").autocomplete(function() {
 		if ($(this).val().length > 0) {
 			$(this).addClass("is-focus");
 		} else {
