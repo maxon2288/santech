@@ -58,6 +58,7 @@ function popup() {
 
     $(".callPopup").on('click', function (event) {
         event.preventDefault();
+        $(".popupClose").trigger("click");
         var popup = $(this).attr('data-popupBlock');
         // if ($('.' + popup).hasClass('popup--notfixed')) {
         //     $('.' + popup).scroll(function () {

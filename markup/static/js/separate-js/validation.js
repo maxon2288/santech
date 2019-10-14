@@ -168,5 +168,27 @@ $(document).ready(function() {
 		});
 	});
 
+	$('.call-form').each(function() {
+        var it = $(this);
+         it.validate({
+			rules: {
+				name: {
+					required: true,
+				},
+				phone: {
+					required: true,
+					minlength: 17,
+				},
+			},
+
+			errorPlacement: function (error, element) {
+			},
+
+			submitHandler: function() {
+				$(".call-submit-popup").trigger("click");				
+			},  
+		});
+	});
+
     
 });

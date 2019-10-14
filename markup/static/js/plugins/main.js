@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+	console.log('fsfafs');
 
 	$('.phone-mask').mask("+ 7 000 000 00 00");
 	
@@ -16,14 +17,7 @@ $(document).ready(function () {
 			$(this).removeClass("is-focus");
 		}
 	});	
-	$(" .m-field-2 , .m-field").each(function() {
-		if ($(this).val().length > 0) {
-			$(this).addClass("is-focus");
-		} else {
-			$(this).removeClass("is-focus");
-		}
-	});	
-	$(" .m-field-2 , .m-field").autocomplete(function() {
+	$(".m-field-2 , .m-field").each(function() {
 		if ($(this).val().length > 0) {
 			$(this).addClass("is-focus");
 		} else {
