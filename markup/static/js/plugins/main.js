@@ -69,6 +69,16 @@ $(document).ready(function () {
 	});
 
 
+	$('.filter-remove, .overlay').click(function() {
+		$(".filter").removeClass("active");
+		$(".overlay").removeClass("visible");
+	});
+
+	$('.filter-open').click(function() {
+		$(".filter").addClass("active");
+		$(".overlay").addClass("visible");
+	});
+
 	if ($(".table-slider .swiper-slide").length > 2) {
 		var swiper = new Swiper('.table-slider', {
 			slidesPerView: 2,

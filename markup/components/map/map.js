@@ -19,7 +19,7 @@ $(document).ready(function () {
                 { iconLayout: 'default#image',
                 iconImageHref: 'static/img/content/marker.svg',
                 iconImageSize: [37, 37], });    
-            
+                
                 myMap.geoObjects.add(myPlacemark);
             }
         );
